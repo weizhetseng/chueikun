@@ -1,0 +1,177 @@
+//麵包屑
+.breadcrumb {
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  li {
+    font-size: 20px;
+    &.active {
+      color: $red;
+      font-weight: bold;
+      &::before {
+        font-family: "Font Awesome 6 Free";
+        font-weight: bold;
+        content: "\f105";
+        font-size: 20px;
+        padding: 0 20px;
+      }
+    }
+  }
+  @include lg {
+    li {
+      font-size: 16px;
+      img {
+        width: 90%;
+      }
+    }
+  }
+}
+
+//標題樣式
+.title {
+  position: relative;
+  margin-bottom: 40px;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    transform: rotate(-20deg) skew(20deg, 5deg);
+    border-left: 2px solid #a02c2c;
+    border-right: 2px solid #a02c2c;
+    left: -30px;
+  }
+  h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: $red;
+  }
+  @include lg {
+    margin-left: 40px;
+    &::before {
+      width: 160px;
+      left: -27px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+}
+//按鈕樣式
+.button_area {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 60px;
+  background: url("src/assets/image/other/button_bg_active.png") no-repeat
+    center;
+  background-size: contain;
+  color: #fff;
+  &:hover {
+    background: url("src/assets/image/other/button_bg.png") no-repeat center;
+    background-size: contain;
+    color: $red;
+  }
+}
+
+//產品表格樣式
+.product_table {
+  width: 100%;
+  display: table;
+  border-collapse: separate;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.3);
+  .thead {
+    display: table-header-group;
+    background: $red;
+    color: #fff;
+    text-align: center;
+    .th {
+      display: table-cell;
+    }
+  }
+  .tr {
+    display: table-row;
+  }
+  .tbody {
+    display: table-header-group;
+
+    .td {
+      min-width: 100px;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+      .product_item {
+        display: flex;
+        align-items: center;
+        @include lg {
+          flex-direction: column;
+        }
+      }
+      .delivery,
+      .code {
+        display: flex;
+      }
+      .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .product_price,
+    .product_total {
+      .td {
+        border-bottom: 1px dashed rgba($color: #000000, $alpha: 0.1);
+        &:first-child {
+          text-align: left;
+        }
+        &:last-child {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: right;
+        }
+      }
+    }
+    .product_price {
+      .td {
+        &:first-child {
+          p {
+            &:first-child {
+              margin-bottom: 10px;
+            }
+          }
+        }
+        &:last-child {
+          p {
+            &:first-child {
+              color: #bbb;
+              text-decoration: line-through;
+              margin-bottom: 10px;
+            }
+            &:last-child {
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include md {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

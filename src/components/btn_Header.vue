@@ -13,9 +13,102 @@
       <!-- pc版導覽列 -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="page_link">
-          <li class="nav-item" v-for="item in link" :key="item.title">
-            <RouterLink :to="item.url" class="nav-link">
-              <p>{{ item.title }}</p>
+          <li class="nav-item">
+            <RouterLink to="/news" class="nav-link">
+              <p>最新消息</p>
+            </RouterLink>
+            <ul class="submenu submenu1">
+              <li>
+                <RouterLink to="/news"> 最新消息 </RouterLink>
+              </li>
+              <li>
+                <a href="" class="submenu-item">營業時間 </a>
+              </li>
+              <li>
+                <a href="" class="submenu-item">食品檢驗報告 </a>
+              </li>
+              <li>
+                <a href="" class="submenu-item">食品工廠登記字號</a>
+              </li>
+              <li>
+                <a href="" class="submenu-item">食品業者登記字號 </a>
+              </li>
+              <li>
+                <a href="" class="submenu-item">食品責任保險單 </a>
+              </li>
+              <li>
+                <a href="" class="submenu-item">定型化契約 </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/about" class="nav-link">
+              <p>關於垂坤</p>
+            </RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/product" class="nav-link">
+              <p>線上購物</p>
+            </RouterLink>
+            <ul class="submenu submenu2">
+              <li>
+                <a class="submenu-item" href="#">呷卡鶴系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">皇啡系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">冷凍系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">冷藏系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">肉鬆系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">豬肉系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">牛肉系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">堅果系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">魚製品系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">蜜餞系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">休閒食品系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">豆干系列(非基因改造)</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">穀物系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">沖泡系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">禮盒系列</a>
+              </li>
+              <li>
+                <a class="submenu-item" href="#">紙袋+塑膠袋加購</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/location" class="nav-link">
+              <p>營業據點</p>
+            </RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="" class="nav-link">
+              <p>訂單下載</p>
             </RouterLink>
           </li>
         </ul>
@@ -30,14 +123,14 @@
             </RouterLink>
           </li>
           <li class="box2">
-            <RouterLink to="/shopping_cart">
+            <RouterLink to="/shoppingcart">
               <span>2</span>
               <img src="../assets/image/header/cart.png" alt="" />
               <p>購物車</p>
             </RouterLink>
           </li>
           <li class="box3">
-            <RouterLink to="/login">
+            <RouterLink to="/member">
               <img src="../assets/image/header/user02.png" alt="" />
               <p>會員專區</p>
             </RouterLink>

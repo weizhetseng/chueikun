@@ -1,0 +1,19 @@
+.shopping_cart {
+  .product_table {
+    margin-bottom: 80px;
+    @include lg {
+      margin-bottom: 40px;
+    }
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  .button_area {
+    margin-bottom: 80px;
+    @include lg {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.about {
+  .row {
+    border-bottom: 1px solid #707070;
+    padding-bottom: 100px;
+    margin-bottom: 80px;
+    @include lg {
+      margin-bottom: 40px;
+    }
+  }
+  h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 30px;
+    span {
+      font-size: 20px;
+      color: $red;
+    }
+  }
+  .img_area {
+    position: relative;
+    img {
+      border-radius: 20px;
+    }
+    .sm_img {
+      position: absolute;
+      width: 50%;
+      left: 10%;
+      top: 50%;
+    }
+  }
+  .button_area {
+    margin-bottom: 80px;
+    @include lg {
+      margin-bottom: 40px;
+    }
+  }
+}
