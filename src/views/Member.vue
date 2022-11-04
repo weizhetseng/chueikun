@@ -7,7 +7,7 @@
     />
     <btnBanner></btnBanner>
   </div>
-  <div class="container member">
+  <div class="container login">
     <ul class="breadcrumb">
       <li>
         <RouterLink to="/">
@@ -22,8 +22,48 @@
           <h2>會員登入</h2>
           <p>Member &nbsp Login</p>
         </div>
+        <form action="">
+          <div class="form_style">
+            <label for="">
+              <span class="icon material-icons"> mail </span>
+              <p>帳號</p>
+            </label>
+            <input type="text" placeholder="請輸入手機號碼或電子信箱" />
+          </div>
+          <div class="form_style">
+            <label for="">
+              <span class="icon material-icons-outlined"> key </span>
+              <p>密碼</p>
+            </label>
+            <input type="text" placeholder="請輸入密碼" />
+          </div>
+          <div class="check">
+            <label for="">
+              <input type="checkbox" />
+              記住我
+            </label>
+            <RouterLink to="">忘記密碼</RouterLink>
+          </div>
+          <div class="button_area">
+            <RouterLink to="" class="button">登入</RouterLink>
+          </div>
+        </form>
+        <div class="other">
+          <p>其他方式登入</p>
+          <div>
+            <RouterLink to="">
+              <img src="../assets/image/other/facebook.png" alt="" />
+            </RouterLink>
+            <RouterLink to="">
+              <img src="../assets/image/other/line.png" alt="" />
+            </RouterLink>
+            <RouterLink to="">
+              <img src="../assets/image/other/google.png" alt="" />
+            </RouterLink>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 membership">
         <div class="title">
           <h2>會員註冊</h2>
           <p>Sign &nbsp Up</p>
@@ -102,6 +142,12 @@
               4.每次結束使用本服務，執行會員之登出並關閉視窗，以確保您的會員權益。
             </li>
           </ol>
+        </div>
+        <label for="">
+          <input type="checkbox" />我已閱讀並同意提供以上資料供垂坤連繫使用。
+        </label>
+        <div class="button_area">
+          <RouterLink to="" class="button">下一步</RouterLink>
         </div>
       </div>
     </div>

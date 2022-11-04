@@ -1,3 +1,4 @@
+//購物車
 .shopping_cart {
   .product_table {
     margin-bottom: 80px;
@@ -14,6 +15,231 @@
     margin-bottom: 80px;
     @include lg {
       margin-bottom: 40px;
+    }
+  }
+}
+//會員結帳
+//訪客結帳
+.memberpay,
+.visitorpay {
+  h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  .product_table {
+    .td {
+      .product_item {
+        flex-direction: row;
+      }
+    }
+    .warnings {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: #dedede;
+      margin: 20px;
+      span {
+        color: $red;
+      }
+    }
+  }
+  .customer_table {
+    .check {
+      margin-bottom: 10px;
+    }
+    .form_style {
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include md {
+        flex-direction: column;
+      }
+      label {
+        width: 11%;
+        @include xl {
+          width: 15%;
+        }
+        @include lg {
+          width: 20%;
+        }
+        @include md {
+          border: none;
+          width: 100%;
+        }
+      }
+      input {
+        width: 40%;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        box-shadow: 0px 0px 6px 2px rgba($color: #000000, $alpha: 0.2);
+        @include xl {
+          width: 50%;
+        }
+        @include md {
+          width: 100%;
+        }
+      }
+      .address_area {
+        width: 50%;
+        text-align: left;
+        @include lg {
+          width: 80%;
+        }
+        @include md {
+          width: 100%;
+        }
+      }
+      select {
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 6px 2px rgba($color: #000000, $alpha: 0.2);
+      }
+      .select_area {
+        display: flex;
+        @include md {
+          flex-direction: column;
+        }
+      }
+      .city {
+        width: 20%;
+        margin-right: 10px;
+        @include md {
+          width: 100%;
+        }
+      }
+      .country {
+        width: 20%;
+        margin-right: 10px;
+        @include md {
+          width: 100%;
+        }
+      }
+      .street {
+        width: 40%;
+        @include md {
+          width: 100%;
+        }
+      }
+      .address {
+        width: 100%;
+      }
+    }
+    .pay_methods {
+      display: flex;
+      flex-direction: column;
+      label {
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .delivery_methods {
+      label {
+        margin-bottom: 10px;
+      }
+    }
+    .receipt_data {
+      display: flex;
+      @include md {
+        flex-direction: column;
+      }
+      .receipt_title {
+        width: 10%;
+        padding-right: 20px;
+        border-right: 1px solid #707070;
+        margin-right: 20px;
+        @include lg {
+          width: 20%;
+        }
+        @include md {
+          margin-right: 0;
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+          margin-bottom: 10px;
+        }
+      }
+      label {
+        margin-right: 20px;
+        @include lg {
+          margin-bottom: 10px;
+        }
+      }
+      input[type="text"] {
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 6px 2px rgba($color: #000000, $alpha: 0.2);
+        margin-left: 5px;
+      }
+    }
+  }
+  .button_area {
+    margin: 80px 0;
+    @include lg {
+      margin: 40px 0;
+    }
+  }
+}
+
+.visitorpay {
+  .form_style {
+    .captcha_input {
+      display: flex;
+      width: 60%;
+      input {
+        width: 50%;
+      }
+      @include xl {
+        width: 83%;
+        input {
+          width: 60.5%;
+        }
+      }
+      @include md {
+        flex-direction: column;
+        width: 100%;
+        input {
+          width: 100%;
+        }
+        .captcha {
+          align-self: center;
+          margin-top: 10px;
+          @include md {
+            align-self: end;
+          }
+        }
+      }
+    }
+  }
+
+  .captcha {
+    padding: 5px 20px;
+    background: $red;
+    border-radius: 0 30px 0 30px;
+    color: #fff;
+    margin-left: 20px;
+    box-shadow: 2px 2px 2px 2px #f6eedd;
+  }
+}
+
+//訂單確認
+.ordercheck {
+  h3 {
+    color: #ffbf00;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .button_area {
+    margin: 80px 0;
+    @include lg {
+      margin: 40px 0;
     }
   }
 }

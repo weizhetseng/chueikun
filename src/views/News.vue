@@ -41,10 +41,7 @@
       </ul>
       <ul class="col-2 d-lg-block d-none aside_list">
         <li>
-          <RouterLink to="/news">
-            最新消息
-            <img src="../assets/image/other/" alt="" />
-          </RouterLink>
+          <RouterLink to="/news"> 最新消息 </RouterLink>
         </li>
         <li>
           <a href="" class="submenu-item">營業時間 </a>
