@@ -130,7 +130,7 @@
             </RouterLink>
           </li>
           <li class="box3">
-            <RouterLink to="/member">
+            <RouterLink to="/login">
               <img src="../assets/image/header/user02.png" alt="" />
               <p>會員專區</p>
             </RouterLink>

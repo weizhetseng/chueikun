@@ -1,4 +1,5 @@
 body {
+  font-family: "Noto Sans TC", sans-serif;
   background: url("/src/assets/image/banner/CHUEIKUN.png") no-repeat;
   background-position: top 400px left 0px;
   line-height: 1.5;
@@ -357,7 +358,6 @@ footer {
     li {
       width: 33%;
       margin-bottom: 20px;
-      text-align: center;
     }
   }
   .footer_contact {

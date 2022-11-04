@@ -51,7 +51,7 @@ export default {
           title: "營業據點",
         },
         {
-          url: "/member",
+          url: "/login",
           title: "會員專區",
         },
         {

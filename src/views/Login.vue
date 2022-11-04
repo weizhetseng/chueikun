@@ -42,7 +42,7 @@
               <input type="checkbox" />
               記住我
             </label>
-            <RouterLink to="">忘記密碼</RouterLink>
+            <RouterLink to="/forgot">忘記密碼</RouterLink>
           </div>
           <div class="button_area">
             <RouterLink to="" class="button">登入</RouterLink>
@@ -147,7 +147,7 @@
           <input type="checkbox" />我已閱讀並同意提供以上資料供垂坤連繫使用。
         </label>
         <div class="button_area">
-          <RouterLink to="" class="button">下一步</RouterLink>
+          <RouterLink to="/register" class="button">下一步</RouterLink>
         </div>
       </div>
     </div>

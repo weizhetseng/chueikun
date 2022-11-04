@@ -287,3 +287,60 @@
     }
   }
 }
+//驗證碼樣式
+.captcha {
+  padding: 5px 20px;
+  background: $red;
+  border-radius: 0 30px 0 30px;
+  color: #fff;
+  margin-left: 20px;
+  box-shadow: 2px 2px 2px 2px #f6eedd;
+  white-space: nowrap;
+}
+
+//會員專區列表
+.member_list {
+  li {
+    position: relative;
+    margin-bottom: 20px;
+
+    a {
+      display: block;
+      color: #000;
+    }
+    &::before {
+      width: 10px;
+      height: 10px;
+      content: "";
+      display: block;
+      background: $red;
+      position: absolute;
+      transform: rotate(45deg) translateY(-50%);
+      top: 50%;
+      right: 60px;
+      transition: 0.5s;
+    }
+    &::after {
+      width: 60px;
+      height: 2px;
+      content: "";
+      display: block;
+      background: $red;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transition: 0.5s;
+    }
+    &:hover {
+      a {
+        color: $red;
+      }
+      &::before {
+        right: 50px;
+      }
+      &::after {
+        width: 50px;
+      }
+    }
+  }
+}

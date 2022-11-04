@@ -30,9 +30,9 @@ const router = createRouter({
       component: () => import("../views/Location.vue"),
     },
     {
-      path: "/member",
-      name: "member",
-      component: () => import("../views/Member.vue"),
+      path: "/login",
+      name: "login",
+      component: () => import("../views/Login.vue"),
     },
     {
       path: "/product",
@@ -63,6 +63,36 @@ const router = createRouter({
       path: "/orderdone",
       name: "orderdone",
       component: () => import("../views/OrderDone.vue"),
+    },
+    {
+      path: "/forgot",
+      name: "forgot",
+      component: () => import("../views/Forgot.vue"),
+    },
+    {
+      path: "/forgotmsg",
+      name: "forgotmsg",
+      component: () => import("../views/ForgotMsg.vue"),
+    },
+    {
+      path: "/phoneverify",
+      name: "phoneverify",
+      component: () => import("../views/PhoneVerify.vue"),
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: () => import("../views/Register.vue"),
+    },
+    {
+      path: "/memberonly",
+      name: "memberonly",
+      component: () => import("../views/MemberOnly.vue"),
+    },
+    {
+      path: "/memberorder",
+      name: "memberorder",
+      component: () => import("../views/MemberOrder.vue"),
     },
   ],
 });
