@@ -45,7 +45,7 @@
             <RouterLink to="/forgot">忘記密碼</RouterLink>
           </div>
           <div class="button_area">
-            <RouterLink to="" class="button">登入</RouterLink>
+            <RouterLink to="/memberonly" class="button">登入</RouterLink>
           </div>
         </form>
         <div class="other">

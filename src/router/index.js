@@ -94,6 +94,26 @@ const router = createRouter({
       name: "memberorder",
       component: () => import("../views/MemberOrder.vue"),
     },
+    {
+      path: "/memberorderdetail",
+      name: "memberorderdetail",
+      component: () => import("../views/MemberOrderDetail.vue"),
+    },
+    {
+      path: "/changepassword",
+      name: "changepassword",
+      component: () => import("../views/ChangePassword.vue"),
+    },
+    {
+      path: "/changepassword-2",
+      name: "changepassword-2",
+      component: () => import("../views/changepassword-2.vue"),
+    },
+    {
+      path: "/logout",
+      name: "logout",
+      component: () => import("../views/Logout.vue"),
+    },
   ],
 });
 
