@@ -114,6 +114,21 @@ const router = createRouter({
       name: "logout",
       component: () => import("../views/Logout.vue"),
     },
+    {
+      path: "/bindother",
+      name: "bindother",
+      component: () => import("../views/BindOther.vue"),
+    },
+    {
+      path: "/memberrevise",
+      name: "memberrevise",
+      component: () => import("../views/MemberRevise.vue"),
+    },
+    {
+      path: "/memberrevise-2",
+      name: "memberrevise-2",
+      component: () => import("../views/MemberRevise-2.vue"),
+    },
   ],
 });
 

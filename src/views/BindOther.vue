@@ -8,7 +8,7 @@
       />
       <btnBanner></btnBanner>
     </div>
-    <div class="container changepassword">
+    <div class="container bindother">
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
@@ -16,7 +16,7 @@
           </RouterLink>
         </li>
         <li class="active">會員專區</li>
-        <li class="active">變更會員密碼</li>
+        <li class="active">綁定其他帳號</li>
       </ul>
 
       <div class="title">
@@ -28,28 +28,36 @@
           <btnMemberList></btnMemberList>
         </div>
         <div class="main">
-          <form action="">
-            <div class="form_style">
-              <label for=""> <span class="text-danger">*</span>舊密碼 </label>
-              <input type="text" placeholder="請輸入舊密碼" />
+          <div class="form_style">
+            <label for="">
+              <img src="../assets/image/other/facebook.png" alt="" />
+              Facebook
+            </label>
+            <div class="bind_status">
+              <p>已綁定</p>
+              <a href="">解除綁定</a>
             </div>
-            <div class="form_style">
-              <label for=""> <span class="text-danger">*</span>新密碼 </label>
-              <input type="text" placeholder="請再輸入新密碼" />
+          </div>
+          <div class="form_style">
+            <label for="">
+              <img src="../assets/image/other/line.png" alt="" />
+              LINE
+            </label>
+            <div class="bind_status">
+              <p>未綁定</p>
+              <a href="">綁定</a>
             </div>
-            <div class="form_style">
-              <label for="">
-                <span class="text-danger">*</span>確認新密碼
-              </label>
-              <input type="text" placeholder="請再輸入一次新密碼" />
+          </div>
+          <div class="form_style">
+            <label for="">
+              <img src="../assets/image/other/google.png" alt="" />
+              GOOGLE
+            </label>
+            <div class="bind_status">
+              <p>未綁定</p>
+              <a href="">綁定</a>
             </div>
-            <div class="button_area">
-              <RouterLink to="" class="button">清除</RouterLink>
-              <RouterLink to="/changepassword-2" class="button"
-                >送出</RouterLink
-              >
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

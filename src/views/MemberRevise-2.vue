@@ -8,7 +8,7 @@
       />
       <btnBanner></btnBanner>
     </div>
-    <div class="container forgot">
+    <div class="container memberrevise">
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
@@ -16,33 +16,32 @@
           </RouterLink>
         </li>
         <li class="active">會員專區</li>
-        <li class="active">忘記密碼</li>
+        <li class="active">修改會員資料</li>
       </ul>
 
       <div class="title">
-        <h2>忘記密碼</h2>
-        <p>Forgot &nbsp Password</p>
+        <h2>會員專區</h2>
+        <p>Members &nbsp Only</p>
       </div>
-      <form action="">
-        <div class="form_style">
-          <label for="">
-            <span class="icon material-icons"> mail </span>
-            <p>帳號</p>
-          </label>
-          <input type="text" placeholder="請輸入手機號碼或電子信箱" />
+      <div class="row">
+        <div class="list d-lg-block d-none">
+          <btnMemberList></btnMemberList>
         </div>
-        <div class="button_area">
-          <RouterLink to="" class="button"> 清除 </RouterLink>
-          <RouterLink to="/forgotmsg" class="button"> 送出 </RouterLink>
+        <div class="main">
+          <h3>修改資料成功</h3>
+          <div class="button_area">
+            <RouterLink to="" class="button">返回上一頁</RouterLink>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import btnBanner from "@/components/btn_Banner.vue";
+import btnMemberList from "@/components/btn_MemberList.vue";
 export default {
-  components: { btnBanner },
+  components: { btnBanner, btnMemberList },
 };
 </script>

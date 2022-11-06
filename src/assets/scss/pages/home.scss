@@ -1,0 +1,101 @@
+.home {
+    overflow: hidden;
+    background: url("/src/assets/image/banner/CHUEIKUN.png") no-repeat;
+    background-position: top 810px left 0px;
+    .banner_img{
+        padding-left: 10%;
+    }
+  .hot_news_list {
+    padding: 0;
+    margin-bottom: 120px;
+    @include lg {
+        margin-bottom: 60px;
+      }
+    .row {
+      justify-content: end;
+      .hot_news_list_item {
+        ul {
+          margin-bottom: 10px;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          border-bottom: 1px dashed #707070;
+          padding: 20px 0;
+          a {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            color: #000;
+          }
+        }
+        .button_area {
+          justify-content: end;
+        }
+        @include lg {
+           margin-bottom: 10px;
+          }
+      }
+
+      .hot_news_list_img {
+        padding: 0 0 0 12px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+        @include lg {
+            padding: 0 12px;
+          }
+      }
+    }
+    @include lg {
+        padding: 0 12px;
+      }
+  }
+
+  .recommend_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 1400px) {
+      display: block;
+    }
+    .type_btn {
+      @include lg {
+        overflow-x: scroll;
+      }
+    }
+    ul {
+      display: flex;
+      @include xl {
+        justify-content: center;
+      }
+      @include lg {
+        justify-content: inherit;
+      }
+    }
+  }
+
+  .swiperBox {
+    position: relative;
+    padding: 0 50px;
+  }
+
+  .recommend_swiper {
+    position: initial;
+    padding: 50px 0;
+    .swiper-scrollbar {
+      background: $yellow;
+      bottom: 10px;
+    }
+    .swiper-scrollbar-drag {
+      background: $red;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: $red;
+    }
+  }
+}

@@ -81,6 +81,22 @@
     color: $red;
   }
 }
+.button02{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 70px;
+  background: url("src/assets/image/other/button_bg.png") no-repeat
+    center;
+  background-size: contain;
+  color: $red;
+  &:hover {
+    background: url("src/assets/image/other/button_bg_active.png") no-repeat center;
+    background-size: contain;
+    color: #fff;
+  }
+}
 
 //產品表格樣式
 .product_table {

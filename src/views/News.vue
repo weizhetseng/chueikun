@@ -1,67 +1,69 @@
 <template>
-  <div class="banner">
-    <img
-      class="banner_img"
-      src="../assets/image/banner/banner_news.png"
-      alt=""
-    />
-    <btnBanner></btnBanner>
-  </div>
-  <div class="container news">
-    <ul class="breadcrumb">
-      <li>
-        <RouterLink to="/">
-          <img src="../assets/image/other/home.png" alt="" />
-        </RouterLink>
-      </li>
-      <li class="active">最新消息</li>
-    </ul>
-
-    <div class="title">
-      <h2>最新消息</h2>
-      <p>HOT &nbsp NEWS</p>
+  <div class="page">
+    <div class="banner">
+      <img
+        class="banner_img"
+        src="../assets/image/banner/banner_news.png"
+        alt=""
+      />
+      <btnBanner></btnBanner>
     </div>
-    <div class="row">
-      <ul class="col-lg-10">
-        <li class="row news_card" v-for="item in news" :key="item.title">
-          <img class="col-lg-6" :src="item.imgUrl" alt="" />
-          <div class="col-lg-6">
-            <span>{{ item.date }}</span>
-            <div class="card_title">
-              <div>news</div>
-              <h4>{{ item.title }}</h4>
+    <div class="container news">
+      <ul class="breadcrumb">
+        <li>
+          <RouterLink to="/">
+            <img src="../assets/image/other/home.png" alt="" />
+          </RouterLink>
+        </li>
+        <li class="active">最新消息</li>
+      </ul>
+
+      <div class="title">
+        <h2>最新消息</h2>
+        <p>HOT &nbsp NEWS</p>
+      </div>
+      <div class="row">
+        <ul class="col-lg-10">
+          <li class="row news_card" v-for="item in news" :key="item.title">
+            <img class="col-lg-6" :src="item.imgUrl" alt="" />
+            <div class="col-lg-6">
+              <span>{{ item.date }}</span>
+              <div class="card_title">
+                <div>news</div>
+                <h4>{{ item.title }}</h4>
+              </div>
+              <p>{{ item.content }}</p>
+              <RouterLink to="/newsdetail">
+                了解更多
+                <img src="../assets/image/other/coderwall.png" alt="" />
+              </RouterLink>
             </div>
-            <p>{{ item.content }}</p>
-            <RouterLink to="/newsdetail">
-              了解更多
-              <img src="../assets/image/other/coderwall.png" alt="" />
-            </RouterLink>
-          </div>
-        </li>
-      </ul>
-      <ul class="col-2 d-lg-block d-none aside_list">
-        <li>
-          <RouterLink to="/news"> 最新消息 </RouterLink>
-        </li>
-        <li>
-          <a href="" class="submenu-item">營業時間 </a>
-        </li>
-        <li>
-          <a href="" class="submenu-item">食品檢驗報告 </a>
-        </li>
-        <li>
-          <a href="" class="submenu-item">食品工廠登記字號</a>
-        </li>
-        <li>
-          <a href="" class="submenu-item">食品業者登記字號 </a>
-        </li>
-        <li>
-          <a href="" class="submenu-item">食品責任保險單 </a>
-        </li>
-        <li>
-          <a href="" class="submenu-item">定型化契約 </a>
-        </li>
-      </ul>
+          </li>
+        </ul>
+        <ul class="col-2 d-lg-block d-none aside_list">
+          <li>
+            <RouterLink to="/news"> 最新消息 </RouterLink>
+          </li>
+          <li>
+            <a href="" class="submenu-item">營業時間 </a>
+          </li>
+          <li>
+            <a href="" class="submenu-item">食品檢驗報告 </a>
+          </li>
+          <li>
+            <a href="" class="submenu-item">食品工廠登記字號</a>
+          </li>
+          <li>
+            <a href="" class="submenu-item">食品業者登記字號 </a>
+          </li>
+          <li>
+            <a href="" class="submenu-item">食品責任保險單 </a>
+          </li>
+          <li>
+            <a href="" class="submenu-item">定型化契約 </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
