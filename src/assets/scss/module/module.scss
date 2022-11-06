@@ -361,3 +361,50 @@
     }
   }
 }
+
+
+.product_list{
+  li {
+    position: relative;
+    margin-bottom: 20px;
+
+    a {
+      display: block;
+      color: #000;
+    }
+    &::before {
+      width: 10px;
+      height: 10px;
+      content: "";
+      display: block;
+      background: $red;
+      position: absolute;
+      transform: rotate(45deg) translateY(-50%);
+      top: 50%;
+      right: 50px;
+      transition: 0.5s;
+    }
+    &::after {
+      width: 50px;
+      height: 2px;
+      content: "";
+      display: block;
+      background: $red;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transition: 0.5s;
+    }
+    &:hover {
+      a {
+        color: $red;
+      }
+      &::before {
+        right: 40px;
+      }
+      &::after {
+        width: 40px;
+      }
+    }
+  }
+}

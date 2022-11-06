@@ -47,7 +47,7 @@
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/product" class="nav-link">
+            <RouterLink to="/shop_method-1" class="nav-link">
               <p>線上購物</p>
             </RouterLink>
             <ul class="submenu submenu2">

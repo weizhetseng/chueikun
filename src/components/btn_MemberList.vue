@@ -1,19 +1,38 @@
 <template>
   <ul class="member_list">
-    <li>
-      <RouterLink to="/memberorder">查詢訂單資料</RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/memberrevise">修改會員資料</RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/changepassword">變更密碼</RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/bindother">綁定其他帳號</RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/logout">會員登出</RouterLink>
+    <li v-for="item in links" :key="item.title">
+      <RouterLink :to="item.url">{{ item.title }}</RouterLink>
     </li>
   </ul>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      links: [
+        {
+          url: "/memberorder",
+          title: "查詢訂單資料",
+        },
+        {
+          url: "/memberrevise",
+          title: "修改會員資料",
+        },
+        {
+          url: "/changepassword",
+          title: "變更密碼",
+        },
+        {
+          url: "/bindother",
+          title: "綁定其他帳號",
+        },
+        {
+          url: "/logout",
+          title: "會員登出",
+        },
+      ],
+    };
+  },
+};
+</script>
