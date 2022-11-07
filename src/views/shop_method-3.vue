@@ -32,7 +32,7 @@
             <RouterLink to="/shop_method-2">付款方式</RouterLink>
             <RouterLink to="/shop_method-3" class="active">訂購須知</RouterLink>
           </div>
-          <div>
+          <div class="shop_content">
             <p>
               周一至周五：１７點前<span class="text-danger"
                 >(網路下單15點前)</span

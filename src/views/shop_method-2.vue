@@ -33,8 +33,8 @@
             <RouterLink to="/shop_method-3">訂購須知</RouterLink>
           </div>
           <div class="shop_content">
-            <h3>付款方式</h3>
-            <p>貨到付款 (免手續費)</p>
+            <h4>付款方式</h4>
+            <p>貨到付款 <span class="text-danger">(免手續費)</span></p>
             <p>匯款 (須於到貨日前2-3天的15點前完成)，(不含例假日)</p>
             <p>銀行代碼: OOO</p>
             <p>銀行帳號: OOOOOOOOOOOOO</p>

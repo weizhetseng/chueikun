@@ -81,18 +81,18 @@
     color: $red;
   }
 }
-.button02{
+.button02 {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 200px;
   height: 70px;
-  background: url("src/assets/image/other/button_bg.png") no-repeat
-    center;
+  background: url("src/assets/image/other/button_bg.png") no-repeat center;
   background-size: contain;
   color: $red;
   &:hover {
-    background: url("src/assets/image/other/button_bg_active.png") no-repeat center;
+    background: url("src/assets/image/other/button_bg_active.png") no-repeat
+      center;
     background-size: contain;
     color: #fff;
   }
@@ -362,8 +362,7 @@
   }
 }
 
-
-.product_list{
+.product_list {
   li {
     position: relative;
     margin-bottom: 20px;
@@ -404,6 +403,176 @@
       }
       &::after {
         width: 40px;
+      }
+    }
+  }
+}
+
+//計算數量
+.calculate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .calculate_btn {
+    i {
+      color: #fff;
+      padding: 5px;
+    }
+    &:first-child {
+      background: #000;
+    }
+    &:last-child {
+      background: $red;
+    }
+  }
+  .calculate_num {
+    padding: 0 10%;
+  }
+}
+//產品卡片
+.product_item {
+  box-shadow: 3px 3px 2px 2px #f6eedd;
+  border-radius: 0 30px 0 30px;
+  img {
+    width: 100%;
+  }
+  .card_text {
+    padding: 10px;
+    h4 {
+      font-size: 20px;
+      font-weight: bold;
+      a {
+        color: #000;
+      }
+    }
+    .price {
+      font-size: 20px;
+      text-align: right;
+      margin-top: 20px;
+      color: $red;
+    }
+    .tag {
+      span {
+        background: $red;
+        color: #fff;
+        padding: 0 5px;
+      }
+    }
+    .cal_btn {
+      display: flex;
+      flex-direction: column;
+      .calculate {
+        width: 100%;
+        margin-bottom: 5px;
+        border: 1px solid #707070;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background: $red;
+        padding: 5px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+//產品頁標題
+.title_group {
+  margin-bottom: 20px;
+  & > div {
+    display: flex;
+    align-items: baseline;
+    h3 {
+      color: $red;
+      font-weight: bold;
+      font-size: 30px;
+      margin-right: 20px;
+    }
+    .sm_box_group {
+      display: flex;
+      .sm_box {
+        width: 10px;
+        height: 10px;
+        margin-right: 4px;
+        transform: rotate(45deg);
+      }
+      .box1 {
+        background: #000;
+      }
+      .box2 {
+        background: #b4a27f;
+      }
+      .box3 {
+        background: $red;
+      }
+    }
+  }
+}
+
+//回到頂端
+.toTop {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  z-index: 10;
+  img {
+    width: 60px;
+    height: 60px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    @include sm {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+//分頁
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0;
+  ul {
+    display: flex;
+    gap: 20px;
+    li {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      border: 1px solid $red;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      &:first-child,
+      &:last-child {
+        border: none;
+        &:hover {
+          background: transparent;
+        }
+      }
+      &:hover {
+        background: $red;
+        a {
+          color: #fff;
+        }
+      }
+      a {
+        color: $red;
+      }
+    }
+  }
+  @include sm {
+    ul {
+      gap: 10px;
+      li {
+        width: 40px;
+        height: 40px;
       }
     }
   }

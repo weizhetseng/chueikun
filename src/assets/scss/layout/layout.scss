@@ -6,6 +6,7 @@ body {
 .page {
   background: url("/src/assets/image/banner/CHUEIKUN.png") no-repeat;
   background-position: top 400px left 0px;
+  z-index: -1;
   @include xl {
     background-position: top 320px left 0px;
   }

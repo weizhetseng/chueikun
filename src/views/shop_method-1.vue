@@ -47,8 +47,8 @@
             </RouterLink>
           </div>
 
-          <div>
-            <div class="title_group">
+          <div class="title_group">
+            <div>
               <h3>熱門系列</h3>
               <div class="sm_box_group">
                 <div class="sm_box box1"></div>
@@ -57,6 +57,40 @@
               </div>
             </div>
             <p>Hot &nbsp series</p>
+          </div>
+          <div class="expand_card">
+            <div class="options">
+              <div
+                class="option active"
+                style="
+                  --optionBackground: url(src/assets/image/other/hot_img1.jpg);
+                "
+              ></div>
+              <div
+                class="option"
+                style="
+                  --optionBackground: url(src/assets/image/other/hot_img2.png);
+                "
+              ></div>
+              <div
+                class="option"
+                style="
+                  --optionBackground: url(src/assets/image/other/hot_img3.png);
+                "
+              ></div>
+              <div
+                class="option"
+                style="
+                  --optionBackground: url(src/assets/image/other/hot_img4.jpg);
+                "
+              ></div>
+              <div
+                class="option"
+                style="
+                  --optionBackground: url(src/assets/image/other/hot_img5.jpg);
+                "
+              ></div>
+            </div>
           </div>
         </div>
       </div>
@@ -69,7 +103,9 @@ import btnBanner from "@/components/btn_Banner.vue";
 import btnProductList from "@/components/btn_ProductList.vue";
 export default {
   data() {
-    return {};
+    return {
+      optionStatus: false,
+    };
   },
   components: { btnBanner, btnProductList },
 };

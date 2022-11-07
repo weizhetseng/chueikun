@@ -1,7 +1,31 @@
 <template>
   <div class="home">
     <div class="banner">
-      <img class="banner_img" src="../assets/image/banner/banner.png" alt="" />
+      <swiper
+        :spaceBetween="30"
+        :effect="'fade'"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <img
+            class="banner_home"
+            src="../assets/image/banner/banner.png"
+            alt=""
+          />
+        </swiper-slide>
+        <swiper-slide>
+          <img
+            class="banner_home"
+            src="../assets/image/banner/banner2.png"
+            alt=""
+          />
+        </swiper-slide>
+        <div class="swiper-pagination"></div>
+      </swiper>
       <btnBanner></btnBanner>
     </div>
 
@@ -67,7 +91,7 @@
           }"
           :navigation="true"
           :breakpoints="{
-            '640': {
+            '375': {
               slidesPerView: 2,
               spaceBetween: 20,
             },
@@ -84,7 +108,23 @@
           class="recommend_swiper"
         >
           <swiper-slide v-for="item in product" :key="item.title">
-            <img :src="item.img" alt="" />
+            <div class="product_item">
+              <img :src="item.img" alt="" />
+              <div class="card_text">
+                <div class="tag">
+                  <span>門市限定</span>
+                </div>
+                <h4>{{ item.title }}</h4>
+                <p class="price">單價{{ item.price }}元</p>
+                <div class="cal_btn">
+                  <btncalculate></btncalculate>
+                  <a href="">
+                    <span class="material-icons-outlined"> shopping_cart </span>
+                    放入購物車
+                  </a>
+                </div>
+              </div>
+            </div>
           </swiper-slide>
         </swiper>
       </div>
@@ -94,16 +134,20 @@
 
 <script>
 import btnBanner from "@/components/btn_Banner.vue";
+import btncalculate from "../components/btn_calculate.vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+import "swiper/css/effect-fade";
 
 import { Pagination } from "swiper";
 import { Scrollbar } from "swiper";
 import { Navigation } from "swiper";
+import { EffectFade } from "swiper";
+import { Autoplay } from "swiper";
 export default {
   data() {
     return {
@@ -165,10 +209,10 @@ export default {
       ],
     };
   },
-  components: { btnBanner, Swiper, SwiperSlide },
+  components: { btnBanner, Swiper, SwiperSlide, btncalculate },
   setup() {
     return {
-      modules: [Pagination, Scrollbar, Navigation],
+      modules: [Pagination, Scrollbar, Navigation, EffectFade, Autoplay],
     };
   },
 };

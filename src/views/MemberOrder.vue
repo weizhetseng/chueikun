@@ -50,6 +50,7 @@
               </tr>
             </tbody>
           </table>
+          <btnPagination></btnPagination>
         </div>
       </div>
     </div>
@@ -59,6 +60,8 @@
 <script>
 import btnBanner from "@/components/btn_Banner.vue";
 import btnMemberList from "@/components/btn_MemberList.vue";
+import btnPagination from "../components/btn_pagination.vue";
+
 export default {
   data() {
     return {
@@ -96,6 +99,6 @@ export default {
       ],
     };
   },
-  components: { btnBanner, btnMemberList },
+  components: { btnBanner, btnMemberList, btnPagination },
 };
 </script>

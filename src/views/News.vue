@@ -23,23 +23,27 @@
         <p>HOT &nbsp NEWS</p>
       </div>
       <div class="row">
-        <ul class="col-lg-10">
-          <li class="row news_card" v-for="item in news" :key="item.title">
-            <img class="col-lg-6" :src="item.imgUrl" alt="" />
-            <div class="col-lg-6">
-              <span>{{ item.date }}</span>
-              <div class="card_title">
-                <div>news</div>
-                <h4>{{ item.title }}</h4>
+        <div class="col-lg-10">
+          <ul>
+            <li class="row news_card" v-for="item in news" :key="item.title">
+              <img class="col-lg-6" :src="item.imgUrl" alt="" />
+              <div class="col-lg-6">
+                <span>{{ item.date }}</span>
+                <div class="card_title">
+                  <div>news</div>
+                  <h4>{{ item.title }}</h4>
+                </div>
+                <p>{{ item.content }}</p>
+                <RouterLink to="/newsdetail">
+                  了解更多
+                  <img src="../assets/image/other/coderwall.png" alt="" />
+                </RouterLink>
               </div>
-              <p>{{ item.content }}</p>
-              <RouterLink to="/newsdetail">
-                了解更多
-                <img src="../assets/image/other/coderwall.png" alt="" />
-              </RouterLink>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+          <btnPagination></btnPagination>
+        </div>
+
         <ul class="col-2 d-lg-block d-none aside_list">
           <li>
             <RouterLink to="/news"> 最新消息 </RouterLink>
@@ -70,6 +74,7 @@
 
 <script>
 import btnBanner from "@/components/btn_Banner.vue";
+import btnPagination from "../components/btn_pagination.vue";
 export default {
   data() {
     return {
@@ -105,6 +110,6 @@ export default {
       ],
     };
   },
-  components: { btnBanner },
+  components: { btnBanner, btnPagination },
 };
 </script>

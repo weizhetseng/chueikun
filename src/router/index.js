@@ -139,6 +139,16 @@ const router = createRouter({
       name: "memberrevise-2",
       component: () => import("../views/MemberRevise-2.vue"),
     },
+    {
+      path: "/product",
+      name: "product",
+      component: () => import("../views/Product.vue"),
+    },
+    {
+      path: "/productdetail",
+      name: "productdetail",
+      component: () => import("../views/ProductDetail.vue"),
+    },
   ],
 });
 
