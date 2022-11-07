@@ -61,35 +61,33 @@
           <div class="expand_card">
             <div class="options">
               <div
-                class="option active"
-                style="
-                  --optionBackground: url(src/assets/image/other/hot_img1.jpg);
-                "
-              ></div>
-              <div
+                v-for="(item, index) in hots"
+                :key="index"
                 class="option"
-                style="
-                  --optionBackground: url(src/assets/image/other/hot_img2.png);
-                "
-              ></div>
-              <div
-                class="option"
-                style="
-                  --optionBackground: url(src/assets/image/other/hot_img3.png);
-                "
-              ></div>
-              <div
-                class="option"
-                style="
-                  --optionBackground: url(src/assets/image/other/hot_img4.jpg);
-                "
-              ></div>
-              <div
-                class="option"
-                style="
-                  --optionBackground: url(src/assets/image/other/hot_img5.jpg);
-                "
-              ></div>
+                :class="activeClass == index ? 'active' : ''"
+                @click="openImg(index)"
+                :style="{ 'background-image': item.url }"
+              >
+                <div class="info_active">
+                  <img
+                    class="info_img"
+                    src="../assets/image/other/logotag.png"
+                    alt=""
+                  />
+                  <div class="info_text">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
+                  </div>
+                </div>
+                <div class="info">
+                  <img
+                    class="info_img"
+                    src="../assets/image/other/logotag.png"
+                    alt=""
+                  />
+                  <h3>{{ item.title }}</h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -104,8 +102,40 @@ import btnProductList from "@/components/btn_ProductList.vue";
 export default {
   data() {
     return {
-      optionStatus: false,
+      activeClass: 0, // 0為默認選擇第一個，-1為不選擇
+      hots: [
+        {
+          url: "url(src/assets/image/other/hot_img1.jpg)",
+          title: "肉鬆系列",
+          text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
+        },
+        {
+          url: "url(src/assets/image/other/hot_img2.png)",
+          title: "豬肉系列",
+          text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
+        },
+        {
+          url: "url(src/assets/image/other/hot_img3.png)",
+          title: "魚製品系列",
+          text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
+        },
+        {
+          url: "url(src/assets/image/other/hot_img4.jpg)",
+          title: "休閒食品系列",
+          text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
+        },
+        {
+          url: "url(src/assets/image/other/hot_img5.jpg)",
+          title: "餅乾系列",
+          text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
+        },
+      ],
     };
+  },
+  methods: {
+    openImg(item) {
+      this.activeClass = item;
+    },
   },
   components: { btnBanner, btnProductList },
 };
