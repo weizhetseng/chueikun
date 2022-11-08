@@ -93,7 +93,7 @@
               </p>
               <div class="count">數量<btncalculate></btncalculate></div>
               <a href="" class="customer">客服聊聊</a>
-              <div class="d-flex">
+              <div class="button_area">
                 <a href="" class="shop-cart">放入購物車</a>
                 <a href="" class="shopping">立即購買</a>
               </div>
