@@ -17,7 +17,6 @@
         </li>
         <li class="active">線上購物</li>
       </ul>
-
       <div class="title">
         <h2>線上購物</h2>
         <p>Promotional &nbsp Items</p>
@@ -36,12 +35,19 @@
                 class="main_swiper"
               >
                 <swiper-slide>
-                  <div class="tag">
-                    <p>經典熱銷</p>
-                    <p>人氣推薦</p>
+                  <div>
+                    <div class="tag">
+                      <p>經典熱銷</p>
+                      <p>人氣推薦</p>
+                    </div>
+                    <img src="/src/assets/image/product/product01.png" />
+                    <span
+                      class="material-icons-outlined"
+                      @click="overlaystatus = !overlaystatus"
+                    >
+                      search
+                    </span>
                   </div>
-                  <img src="/src/assets/image/product/product01.png" />
-                  <span class="material-icons-outlined"> search </span>
                 </swiper-slide>
                 <swiper-slide>
                   <div class="tag">
@@ -99,6 +105,7 @@
               </div>
             </div>
           </div>
+
           <div class="feature">
             <div class="title_group">
               <div>
@@ -182,6 +189,17 @@
         </div>
       </div>
     </div>
+    <div class="mask" v-if="overlaystatus">
+      <div class="close">
+        <span
+          class="material-icons-outlined"
+          @click="overlaystatus = !overlaystatus"
+        >
+          close
+        </span>
+      </div>
+      <img src="/src/assets/image/product/product01.png" alt="" />
+    </div>
   </div>
 </template>
 
@@ -199,7 +217,7 @@ import "swiper/css/navigation";
 export default {
   data() {
     return {
-      maskStatus: false,
+      overlaystatus: false,
       product: [
         {
           img: "product01.png",
