@@ -23,7 +23,7 @@
         <p>Promotional &nbsp Items</p>
       </div>
       <div class="row">
-        <div class="list">
+        <div class="list d-none d-lg-block">
           <btnProductList></btnProductList>
         </div>
         <div class="main">
@@ -104,7 +104,7 @@ import btnProductList from "@/components/btn_ProductList.vue";
 export default {
   data() {
     return {
-      activeClass: 0, // 0為默認選擇第一個，-1為不選擇
+      activeClass: 0,
       hots: [
         {
           url: "hot_img1.jpg",

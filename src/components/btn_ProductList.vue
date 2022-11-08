@@ -1,9 +1,19 @@
 <template>
-  <ul class="product_list">
-    <li v-for="item in links" :key="item.title">
-      <RouterLink :to="item.url">{{ item.title }}</RouterLink>
-    </li>
-  </ul>
+  <div class="product_list">
+    <div class="search">
+      <div class="search_input">
+        <input id="search" type="text" placeholder="關鍵字商品搜尋" />
+      </div>
+      <label for="search">
+        <img src="../assets/image/other/search.png" alt="" />
+      </label>
+    </div>
+    <ul>
+      <li v-for="item in links" :key="item.title">
+        <RouterLink :to="item.url">{{ item.title }}</RouterLink>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>

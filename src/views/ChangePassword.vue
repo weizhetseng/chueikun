@@ -44,7 +44,7 @@
               <input type="text" placeholder="請再輸入一次新密碼" />
             </div>
             <div class="button_area">
-              <RouterLink to="" class="button">清除</RouterLink>
+              <button type="reset" class="button02">清除</button>
               <RouterLink to="/changepassword-2" class="button"
                 >送出</RouterLink
               >
