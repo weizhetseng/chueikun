@@ -24,7 +24,7 @@
         <p>Members &nbsp Only</p>
       </div>
       <div class="row">
-        <div class="list d-lg-block d-none">
+        <div class="list">
           <btnMemberList></btnMemberList>
         </div>
         <div class="main">
@@ -60,6 +60,25 @@
 import btnBanner from "@/components/btn_Banner.vue";
 import btnMemberList from "@/components/btn_MemberList.vue";
 export default {
+  data() {
+    return {
+      captchaStatus: false,
+      countDown: 0,
+    };
+  },
+  methods: {
+    postCaptcha() {
+      this.captchaStatus = !this.captchaStatus;
+      this.countDown = 60;
+      let countDownTime = setInterval(() => {
+        this.countDown--;
+        if (this.countDown <= 0) {
+          this.captchaStatus = !this.captchaStatus;
+          clearInterval(countDownTime);
+        }
+      }, 1000);
+    },
+  },
   components: { btnBanner, btnMemberList },
 };
 </script>

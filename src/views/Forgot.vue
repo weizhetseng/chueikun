@@ -32,7 +32,7 @@
           <input type="text" placeholder="請輸入手機號碼或電子信箱" />
         </div>
         <div class="button_area">
-          <RouterLink to="" class="button"> 清除 </RouterLink>
+          <button type="reset" class="button02">清除</button>
           <RouterLink to="/forgotmsg" class="button"> 送出 </RouterLink>
         </div>
       </form>

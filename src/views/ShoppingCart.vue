@@ -51,7 +51,7 @@
                 </div>
               </div>
             </div>
-            <div class="td">數量</div>
+            <div class="td"><btncalculate></btncalculate></div>
             <div class="td">{{ item.price }}元</div>
             <div class="td item_total">{{ item.total }}元</div>
             <div class="td">
@@ -88,7 +88,7 @@
         </div>
       </div>
       <div class="button_area">
-        <RouterLink to="" class="button">繼續購物</RouterLink>
+        <RouterLink to="/shop_method-1" class="button">繼續購物</RouterLink>
         <RouterLink to="/visitorpay" class="button">訪客結帳</RouterLink>
         <RouterLink to="/memberpay" class="button">會員結帳</RouterLink>
       </div>
@@ -98,6 +98,7 @@
 
 <script>
 import btnBanner from "@/components/btn_Banner.vue";
+import btncalculate from "../components/btn_calculate.vue";
 export default {
   data() {
     return {
@@ -134,6 +135,6 @@ export default {
       return new URL(`/src/assets/image/product/${name}`, import.meta.url).href;
     },
   },
-  components: { btnBanner },
+  components: { btnBanner, btncalculate },
 };
 </script>

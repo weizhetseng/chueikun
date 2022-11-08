@@ -24,13 +24,13 @@
         <p>Members &nbsp Only</p>
       </div>
       <div class="row">
-        <div class="list d-lg-block d-none">
+        <div class="list">
           <btnMemberList></btnMemberList>
         </div>
         <div class="main">
           <h3>會員已登出</h3>
           <div class="button_area">
-            <RouterLink to="" class="button">返回首頁</RouterLink>
+            <RouterLink to="/" class="button">返回首頁</RouterLink>
           </div>
         </div>
       </div>

@@ -2,6 +2,19 @@
   overflow: hidden;
   background: url("/src/assets/image/banner/CHUEIKUN.png") no-repeat;
   background-position: top 810px left 0px;
+  z-index: -1;
+  @include xl {
+    background-position: top 610px left 0px;
+  }
+  @include lg {
+    background-position: top 610px left 0px;
+  }
+  @include md {
+    background-position: top 530px left 0px;
+  }
+  @include sm {
+    background-position: top 360px left 0px;
+  }
   .img_area {
     display: flex;
   }

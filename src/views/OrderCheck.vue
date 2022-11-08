@@ -145,7 +145,9 @@
         </div>
       </div>
       <div class="button_area">
-        <RouterLink to="" class="button">回上一步</RouterLink>
+        <RouterLink to="" class="button" @click="this.$router.back()"
+          >回上一步</RouterLink
+        >
         <RouterLink to="/orderdone" class="button">確認送出</RouterLink>
       </div>
     </div>

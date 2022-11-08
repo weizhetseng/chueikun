@@ -28,14 +28,27 @@
           <label for=""> <span class="text-danger">*</span>手機號碼 </label>
           <div class="captcha_input">
             <input type="text" placeholder="請輸入手機號碼" />
-            <a href="" class="captcha">發送驗證碼</a>
+            <a
+              href="#"
+              class="captcha"
+              @click="postCaptcha()"
+              v-show="!captchaStatus"
+              :style="{ 'pointer-events': captchaStatus ? 'none' : 'auto' }"
+              >發送驗證碼</a
+            >
           </div>
         </div>
         <div class="form_style">
           <label for=""><span class="text-danger">*</span> 驗證碼 </label>
           <div class="captcha_input">
             <input type="text" placeholder="請輸入簡訊驗證碼" />
-            <a href="" class="captcha">重發驗證碼(59)</a>
+            <a
+              href=""
+              class="captcha"
+              v-show="captchaStatus"
+              :style="{ 'pointer-events': captchaStatus ? 'none' : 'auto' }"
+              >重發驗證碼({{ countDown }})</a
+            >
           </div>
         </div>
         <div class="button_area">
@@ -49,6 +62,25 @@
 <script>
 import btnBanner from "@/components/btn_Banner.vue";
 export default {
+  data() {
+    return {
+      captchaStatus: false,
+      countDown: 0,
+    };
+  },
+  methods: {
+    postCaptcha() {
+      this.captchaStatus = !this.captchaStatus;
+      this.countDown = 60;
+      let countDownTime = setInterval(() => {
+        this.countDown--;
+        if (this.countDown <= 0) {
+          this.captchaStatus = !this.captchaStatus;
+          clearInterval(countDownTime);
+        }
+      }, 1000);
+    },
+  },
   components: { btnBanner },
 };
 </script>

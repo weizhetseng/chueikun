@@ -16,6 +16,14 @@
     @include lg {
       margin-bottom: 40px;
     }
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .calculate {
+    align-items: center;
+    justify-content: center;
   }
 }
 //會員結帳

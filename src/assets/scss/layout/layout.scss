@@ -5,19 +5,19 @@ body {
 }
 .page {
   background: url("/src/assets/image/banner/CHUEIKUN.png") no-repeat;
-  background-position: top 400px left 0px;
+  background-position: top 300px left 0px;
   z-index: -1;
   @include xl {
-    background-position: top 320px left 0px;
+    background-position: top 270px left 0px;
   }
   @include lg {
-    background-position: top 300px left 0px;
+    background-position: top 250px left 0px;
   }
   @include md {
-    background-position: top 280px left 0px;
+    background-position: top 220px left 0px;
   }
   @include sm {
-    background-position: top 240px left 0px;
+    background-position: top 160px left 0px;
   }
 }
 

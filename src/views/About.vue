@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="button_area">
-        <RouterLink to="" class="button">返回上一頁</RouterLink>
+        <RouterLink to="/" class="button">返回上一頁</RouterLink>
       </div>
     </div>
   </div>

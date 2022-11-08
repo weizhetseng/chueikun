@@ -25,7 +25,7 @@
       </div>
       <h3>您的新密碼已經發送到您的手機，請查看訊息</h3>
       <div class="button_area">
-        <RouterLink to="/" class="button">返回登入頁</RouterLink>
+        <RouterLink to="/login" class="button">返回登入頁</RouterLink>
       </div>
     </div>
   </div>

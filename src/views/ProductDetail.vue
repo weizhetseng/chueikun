@@ -23,7 +23,7 @@
         <p>Promotional &nbsp Items</p>
       </div>
       <div class="row">
-        <div class="list d-lg-block d-none">
+        <div class="list">
           <btnProductList></btnProductList>
         </div>
         <div class="main">
@@ -156,7 +156,7 @@
                 :modules="modules"
               >
                 <swiper-slide v-for="item in product" :key="item.title">
-                  <div class="product_item">
+                  <div class="product_card">
                     <img :src="imageUrl(item.img)" alt="" />
                     <div class="card_text">
                       <div class="tag">

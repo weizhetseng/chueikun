@@ -1,5 +1,5 @@
 <template>
-  <div class="toTop" @click="goTop">
+  <div class="toTop" @click="scrollToTop()">
     <img src="../assets/image/other/goTop.png" alt="" />
   </div>
 </template>
@@ -12,21 +12,8 @@ export default {
     };
   },
   methods: {
-    goTop() {
-      const scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop;
-
-      let speed = scrollTop / 10;
-
-      const timeTop = setInterval(() => {
-        if (document.documentElement.scrollTop !== 0) {
-          document.documentElement.scrollTop -= speed;
-        } else {
-          clearInterval(timeTop);
-        }
-      }, 20);
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     },
   },
 };

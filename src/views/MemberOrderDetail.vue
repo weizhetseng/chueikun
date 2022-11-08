@@ -24,7 +24,7 @@
         <p>Members &nbsp Only</p>
       </div>
       <div class="row">
-        <div class="list d-lg-block d-none">
+        <div class="list">
           <btnMemberList></btnMemberList>
         </div>
         <div class="main">
@@ -51,9 +51,9 @@
                   <div class="pay_list">
                     <h4>訂單狀態</h4>
                     <p>訂單處理中</p>
-                    <a href="">取消訂單</a>
+                    <a href="" class="cancel">取消訂單</a>
                   </div>
-                  <a href="">客服聊聊</a>
+                  <a href="" class="customer">客服聊聊</a>
                 </div>
               </div>
               <div class="tr">

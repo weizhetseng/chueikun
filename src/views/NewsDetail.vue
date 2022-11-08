@@ -43,7 +43,9 @@
         </div>
       </div>
       <div class="button_area">
-        <RouterLink to="" class="button"> 返回列表 </RouterLink>
+        <RouterLink to="" class="button" @click="this.$router.back()">
+          返回列表
+        </RouterLink>
       </div>
     </div>
   </div>

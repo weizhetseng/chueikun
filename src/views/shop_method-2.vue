@@ -23,7 +23,7 @@
         <p>Promotional &nbsp Items</p>
       </div>
       <div class="row">
-        <div class="list d-lg-block d-none">
+        <div class="list">
           <btnProductList></btnProductList>
         </div>
         <div class="main">
@@ -41,7 +41,9 @@
             <p>收款人: XXX</p>
           </div>
           <div class="button_area">
-            <RouterLink to="" class="button">返回上一頁</RouterLink>
+            <RouterLink to="" class="button" @click="this.$router.back()"
+              >返回上一頁</RouterLink
+            >
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@
         <p>Promotional &nbsp Items</p>
       </div>
       <div class="row">
-        <div class="list d-lg-block d-none">
+        <div class="list">
           <btnProductList></btnProductList>
         </div>
         <div class="main">
