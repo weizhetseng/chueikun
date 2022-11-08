@@ -157,7 +157,7 @@
               >
                 <swiper-slide v-for="item in product" :key="item.title">
                   <div class="product_item">
-                    <img :src="item.img" alt="" />
+                    <img :src="imageUrl(item.img)" alt="" />
                     <div class="card_text">
                       <div class="tag">
                         <span>門市限定</span>
@@ -202,47 +202,52 @@ export default {
       maskStatus: false,
       product: [
         {
-          img: "/src/assets/image/product/product01.png",
+          img: "product01.png",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "/src/assets/image/product/product02.png",
+          img: "product02.png",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "/src/assets/image/product/product03.png",
+          img: "product03.png",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "/src/assets/image/product/product04.png",
+          img: "product04.png",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "/src/assets/image/product/product01.png",
+          img: "product01.png",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "/src/assets/image/product/product02.png",
+          img: "product02.png",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "/src/assets/image/product/product03.png",
+          img: "product03.png",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "/src/assets/image/product/product04.png",
+          img: "product04.png",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
       ],
     };
+  },
+  methods: {
+    imageUrl(name) {
+      return new URL(`/src/assets/image/product/${name}`, import.meta.url).href;
+    },
   },
   components: { btnBanner, btnProductList, btncalculate, Swiper, SwiperSlide },
   setup() {

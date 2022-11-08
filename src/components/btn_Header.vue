@@ -18,26 +18,8 @@
               <p>最新消息</p>
             </RouterLink>
             <ul class="submenu submenu1">
-              <li>
-                <RouterLink to="/news"> 最新消息 </RouterLink>
-              </li>
-              <li>
-                <a href="" class="submenu-item">營業時間 </a>
-              </li>
-              <li>
-                <a href="" class="submenu-item">食品檢驗報告 </a>
-              </li>
-              <li>
-                <a href="" class="submenu-item">食品工廠登記字號</a>
-              </li>
-              <li>
-                <a href="" class="submenu-item">食品業者登記字號 </a>
-              </li>
-              <li>
-                <a href="" class="submenu-item">食品責任保險單 </a>
-              </li>
-              <li>
-                <a href="" class="submenu-item">定型化契約 </a>
+              <li v-for="item in news_link" :key="item.title">
+                <RouterLink :to="item.url">{{ item.title }}</RouterLink>
               </li>
             </ul>
           </li>
@@ -51,53 +33,8 @@
               <p>線上購物</p>
             </RouterLink>
             <ul class="submenu submenu2">
-              <li>
-                <a class="submenu-item" href="#">呷卡鶴系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">皇啡系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">冷凍系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">冷藏系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">肉鬆系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">豬肉系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">牛肉系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">堅果系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">魚製品系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">蜜餞系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">休閒食品系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">豆干系列(非基因改造)</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">穀物系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">沖泡系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">禮盒系列</a>
-              </li>
-              <li>
-                <a class="submenu-item" href="#">紙袋+塑膠袋加購</a>
+              <li v-for="item in product_links" :key="item.title">
+                <RouterLink :to="item.url">{{ item.title }}</RouterLink>
               </li>
             </ul>
           </li>
@@ -196,13 +133,11 @@
             最新消息
           </RouterLink>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">最新消息</a></li>
-            <li><a class="dropdown-item" href="#">營業時間</a></li>
-            <li><a class="dropdown-item" href="#">食品檢驗報告</a></li>
-            <li><a class="dropdown-item" href="#">食品工廠登記字號</a></li>
-            <li><a class="dropdown-item" href="#">食品業者登記字號</a></li>
-            <li><a class="dropdown-item" href="#">食品責任保險單</a></li>
-            <li><a class="dropdown-item" href="#">定型化契約</a></li>
+            <li v-for="item in news_link" :key="item.title">
+              <RouterLink class="dropdown-item" :to="item.url">{{
+                item.title
+              }}</RouterLink>
+            </li>
           </ul>
         </li>
         <li class="page_link">
@@ -210,7 +145,7 @@
         </li>
         <li class="page_link">
           <RouterLink
-            to="/product"
+            to="/shop_method-1"
             class="nav-link drop_link"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
@@ -219,22 +154,11 @@
             線上購物
           </RouterLink>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">呷卡鶴系列</a></li>
-            <li><a class="dropdown-item" href="#">皇啡系列</a></li>
-            <li><a class="dropdown-item" href="#">冷凍系列</a></li>
-            <li><a class="dropdown-item" href="#">冷藏系列</a></li>
-            <li><a class="dropdown-item" href="#">肉鬆系列</a></li>
-            <li><a class="dropdown-item" href="#">豬肉系列</a></li>
-            <li><a class="dropdown-item" href="#">牛肉系列</a></li>
-            <li><a class="dropdown-item" href="#">堅果系列</a></li>
-            <li><a class="dropdown-item" href="#">魚製品系列</a></li>
-            <li><a class="dropdown-item" href="#">蜜餞系列</a></li>
-            <li><a class="dropdown-item" href="#">休閒食品系列</a></li>
-            <li><a class="dropdown-item" href="#">豆干系列(非基因改造</a></li>
-            <li><a class="dropdown-item" href="#">穀物系列</a></li>
-            <li><a class="dropdown-item" href="#">沖泡系列</a></li>
-            <li><a class="dropdown-item" href="#">禮盒系列</a></li>
-            <li><a class="dropdown-item" href="#">紙袋+塑膠袋加購</a></li>
+            <li v-for="item in product_links" :key="item.title">
+              <RouterLink class="dropdown-item" :to="item.url">{{
+                item.title
+              }}</RouterLink>
+            </li>
           </ul>
         </li>
         <li class="page_link">
@@ -254,7 +178,7 @@
         </RouterLink>
       </li>
       <li>
-        <RouterLink to="/shopping_cart" class="down_link link2">
+        <RouterLink to="/shoppingcart" class="down_link link2">
           購物車
           <img src="../assets/image/header/cart.png" alt="" />
           <span>0</span>
@@ -297,7 +221,7 @@ export default {
           title: "關於垂坤",
         },
         {
-          url: "/product",
+          url: "/shop_method-1",
           title: "線上購物",
         },
         {
@@ -307,6 +231,106 @@ export default {
         {
           url: "",
           title: "訂單下載",
+        },
+      ],
+      news_link: [
+        {
+          url: "/news",
+          title: "最新消息",
+        },
+        {
+          url: "",
+          title: "營業時間",
+        },
+        {
+          url: "",
+          title: "食品檢驗報告",
+        },
+        {
+          url: "",
+          title: "食品工廠登記字號",
+        },
+        {
+          url: "",
+          title: "食品業者登記字號",
+        },
+        {
+          url: "",
+          title: "食品責任保險單",
+        },
+        {
+          url: "",
+          title: "定型化契約",
+        },
+      ],
+      product_links: [
+        {
+          title: "呷卡鶴系列",
+          url: "/product",
+        },
+        {
+          title: "皇啡系列",
+          url: "/product",
+        },
+        {
+          title: "冷凍系列",
+          url: "/product",
+        },
+        {
+          title: "冷藏系列",
+          url: "/product",
+        },
+        {
+          title: "肉鬆系列",
+          url: "/product",
+        },
+        {
+          title: "豬肉系列",
+          url: "/product",
+        },
+        {
+          title: "牛肉系列",
+          url: "/product",
+        },
+        {
+          title: "堅果系列",
+          url: "/product",
+        },
+        {
+          title: "魚製品系列",
+          url: "/product",
+        },
+        {
+          title: "蜜餞系列",
+          url: "/product",
+        },
+        {
+          title: "休閒食品系列",
+          url: "/product",
+        },
+        {
+          title: "豆干系列(非基因改造)",
+          url: "/product",
+        },
+        {
+          title: "穀物系列",
+          url: "/product",
+        },
+        {
+          title: "沖泡系列",
+          url: "/product",
+        },
+        {
+          title: "餅乾系列",
+          url: "/product",
+        },
+        {
+          title: "禮盒系列",
+          url: "/product",
+        },
+        {
+          title: "紙袋+塑膠袋加購",
+          url: "/product",
         },
       ],
     };
@@ -327,6 +351,7 @@ export default {
       this.mobileStatus = !this.mobileStatus;
     },
   },
+
   created() {
     window.addEventListener("scroll", this.scrollTop);
   },

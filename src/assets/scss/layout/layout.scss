@@ -193,6 +193,37 @@ body {
     p {
       line-height: 2.5;
     }
+    @include sm {
+      margin: 0 auto;
+      padding: 10px;
+      .modal-body {
+        padding: 0;
+      }
+      button {
+        top: 7px;
+      }
+      h5 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 2;
+      }
+    }
+    @include xs {
+      margin: 0 auto;
+
+      .modal-body {
+        padding: 0;
+      }
+      button {
+        top: 5px;
+      }
+      h5 {
+        font-size: 20px;
+      }
+    }
   }
 }
 //手機側選單

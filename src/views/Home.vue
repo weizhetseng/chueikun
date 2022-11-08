@@ -1,31 +1,46 @@
 <template>
   <div class="home">
     <div class="banner">
-      <swiper
-        :spaceBetween="30"
-        :effect="'fade'"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        :modules="modules"
-      >
-        <swiper-slide>
-          <img
-            class="banner_home"
-            src="../assets/image/banner/banner.png"
-            alt=""
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            class="banner_home"
-            src="../assets/image/banner/banner2.png"
-            alt=""
-          />
-        </swiper-slide>
-        <div class="swiper-pagination"></div>
-      </swiper>
+      <div class="img_area">
+        <div class="banner_contact">
+          <div>
+            <p>FOLLOW US</p>
+            <div class="contact_link">
+              <img src="../assets/image/other/ig.png" alt="" />
+              <img src="../assets/image/other/fb.png" alt="" />
+              <img src="../assets/image/other/line2.png" alt="" />
+            </div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <swiper
+          :spaceBetween="30"
+          :effect="'fade'"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+          :modules="modules"
+          class="banner_swiper"
+        >
+          <swiper-slide>
+            <img
+              class="banner_home"
+              src="../assets/image/banner/banner.png"
+              alt=""
+            />
+          </swiper-slide>
+          <swiper-slide>
+            <img
+              class="banner_home"
+              src="../assets/image/banner/banner2.png"
+              alt=""
+            />
+          </swiper-slide>
+          <div class="swiper-pagination"></div>
+        </swiper>
+      </div>
+
       <btnBanner></btnBanner>
     </div>
 
@@ -91,7 +106,7 @@
           }"
           :navigation="true"
           :breakpoints="{
-            '375': {
+            '576': {
               slidesPerView: 2,
               spaceBetween: 20,
             },
@@ -108,7 +123,7 @@
           class="recommend_swiper"
         >
           <swiper-slide v-for="item in product" :key="item.title">
-            <div class="product_item">
+            <div class="product_card">
               <img :src="imageUrl(item.img)" alt="" />
               <div class="card_text">
                 <div class="tag">

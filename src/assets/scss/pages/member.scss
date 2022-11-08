@@ -18,6 +18,16 @@
     overflow-y: scroll;
     box-shadow: 0px 0px 6px 2px rgba($color: #000000, $alpha: 0.2);
     margin-bottom: 20px;
+    background: #fff;
+    &::-webkit-scrollbar {
+      width: 10px;
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $red;
+      border-radius: 10px;
+      border: 2px solid #fff;
+    }
   }
   .form_style {
     margin-bottom: 40px;
@@ -538,7 +548,7 @@
       justify-content: space-between;
       border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
       padding: 5px;
-      a{
+      a {
         display: block;
         width: 100px;
         text-align: center;
@@ -553,7 +563,7 @@
   }
 }
 //修改資料
-.memberrevise{
+.memberrevise {
   margin-bottom: 80px;
   .list {
     width: 20%;
@@ -564,14 +574,14 @@
       width: 100%;
     }
   }
-  h3{
+  h3 {
     text-align: center;
     color: $red;
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 40px;
   }
-  
+
   .form_style {
     align-items: center;
     justify-content: center;
@@ -702,7 +712,7 @@
       align-items: flex-start;
     }
   }
-  .button_area{
+  .button_area {
     margin-top: 80px;
   }
 }

@@ -66,7 +66,9 @@
                 class="option"
                 :class="activeClass == index ? 'active' : ''"
                 @click="openImg(index)"
-                :style="{ 'background-image': item.url }"
+                :style="{
+                  'background-image': 'url(' + imageUrl(item.url) + ')',
+                }"
               >
                 <div class="info_active">
                   <img
@@ -105,27 +107,27 @@ export default {
       activeClass: 0, // 0為默認選擇第一個，-1為不選擇
       hots: [
         {
-          url: "url(src/assets/image/other/hot_img1.jpg)",
+          url: "hot_img1.jpg",
           title: "肉鬆系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
         {
-          url: "url(src/assets/image/other/hot_img2.png)",
+          url: "hot_img2.png",
           title: "豬肉系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
         {
-          url: "url(src/assets/image/other/hot_img3.png)",
+          url: "hot_img3.png",
           title: "魚製品系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
         {
-          url: "url(src/assets/image/other/hot_img4.jpg)",
+          url: "hot_img4.jpg",
           title: "休閒食品系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
         {
-          url: "url(src/assets/image/other/hot_img5.jpg)",
+          url: "hot_img5.jpg",
           title: "餅乾系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
@@ -135,6 +137,9 @@ export default {
   methods: {
     openImg(item) {
       this.activeClass = item;
+    },
+    imageUrl(name) {
+      return new URL(`/src/assets/image/other/${name}`, import.meta.url).href;
     },
   },
   components: { btnBanner, btnProductList },

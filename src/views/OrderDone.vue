@@ -140,7 +140,7 @@
           <div class="tr" v-for="item in order" :key="item.tag">
             <div class="td">
               <div class="product_item">
-                <img :src="item.imgUrl" alt="" />
+                <img :src="imageUrl(item.imgUrl)" alt="" />
                 <div>
                   {{ item.title }}
                   <div class="delivery">
@@ -161,8 +161,7 @@
         </div>
       </div>
       <div class="button_area">
-        <RouterLink to="" class="button">回上一步</RouterLink>
-        <RouterLink to="/orderdone" class="button">確認送出</RouterLink>
+        <RouterLink to="/" class="button">回首頁</RouterLink>
       </div>
     </div>
   </div>
@@ -175,7 +174,7 @@ export default {
     return {
       order: [
         {
-          imgUrl: "src/assets/image/product/shopping_car01.png",
+          imgUrl: "shopping_car01.png",
           title: "[新品]肉鬆小脆餅",
           deliver: " 一般運送",
           tag: "10110",
@@ -183,7 +182,7 @@ export default {
           total: "1480",
         },
         {
-          imgUrl: "src/assets/image/product/shopping_car02.png",
+          imgUrl: "shopping_car02.png",
           title: "麻辣豬肉片",
           deliver: " 一般運送",
           tag: "10318",
@@ -191,7 +190,7 @@ export default {
           total: "1480",
         },
         {
-          imgUrl: "src/assets/image/product/shopping_car03.png",
+          imgUrl: "shopping_car03.png",
           title: "巴西嘉年華-咖啡豆",
           deliver: " 一般運送",
           tag: "11014",
@@ -200,6 +199,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    imageUrl(name) {
+      return new URL(`/src/assets/image/product/${name}`, import.meta.url).href;
+    },
   },
   components: { btnBanner },
 };

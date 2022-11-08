@@ -299,7 +299,7 @@
         &::after {
           content: "";
           display: block;
-          background: url("src/assets/image/other/prev.png") no-repeat center;
+          background: url("/src/assets/image/other/prev.png") no-repeat center;
           background-size: cover;
           width: 20px;
           height: 20px;
@@ -316,7 +316,7 @@
         &::after {
           content: "";
           display: block;
-          background: url("src/assets/image/other/next.png") no-repeat center;
+          background: url("/src/assets/image/other/next.png") no-repeat center;
           background-size: cover;
           width: 20px;
           height: 20px;

@@ -53,7 +53,7 @@ export default {
         },
         {
           title: "休閒食品系列",
-          url: "/product ",
+          url: "/product",
         },
         {
           title: "豆干系列(非基因改造)",

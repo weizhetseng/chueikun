@@ -1,3 +1,78 @@
+//主頁面彈出視窗
+#main_modal {
+  .modal-content {
+    border-radius: 0;
+    border-top: 20px solid $red;
+    border-bottom: 20px solid $red;
+    padding: 15px 30px;
+    position: relative;
+    button {
+      position: absolute;
+      top: 30px;
+      right: 0;
+    }
+    h3 {
+      color: $red;
+      font-weight: bold;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    h4 {
+      font-size: 28px;
+      color: $red;
+      &.company {
+        color: #000;
+      }
+    }
+
+    p {
+      line-height: 2.5;
+      span {
+        font-size: 20px;
+        color: $red;
+      }
+    }
+    @include sm {
+      margin: 0 auto;
+      padding: 10px;
+      .modal-body {
+        padding: 0;
+      }
+      button {
+        top: 7px;
+      }
+      h3 {
+        font-size: 24px;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      p {
+        line-height: 2;
+      }
+    }
+    @include xs {
+      margin: 0 auto;
+
+      .modal-body {
+        padding: 0;
+      }
+      button {
+        top: 5px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 2;
+      }
+    }
+  }
+}
 //麵包屑
 .breadcrumb {
   align-items: center;
@@ -71,12 +146,12 @@
   justify-content: center;
   width: 180px;
   height: 60px;
-  background: url("src/assets/image/other/button_bg_active.png") no-repeat
+  background: url("/src/assets/image/other/button_bg_active.png") no-repeat
     center;
   background-size: contain;
   color: #fff;
   &:hover {
-    background: url("src/assets/image/other/button_bg.png") no-repeat center;
+    background: url("/src/assets/image/other/button_bg.png") no-repeat center;
     background-size: contain;
     color: $red;
   }
@@ -87,11 +162,11 @@
   justify-content: center;
   width: 200px;
   height: 70px;
-  background: url("src/assets/image/other/button_bg.png") no-repeat center;
+  background: url("/src/assets/image/other/button_bg.png") no-repeat center;
   background-size: contain;
   color: $red;
   &:hover {
-    background: url("src/assets/image/other/button_bg_active.png") no-repeat
+    background: url("/src/assets/image/other/button_bg_active.png") no-repeat
       center;
     background-size: contain;
     color: #fff;
@@ -431,7 +506,7 @@
   }
 }
 //產品卡片
-.product_item {
+.product_card {
   box-shadow: 3px 3px 2px 2px #f6eedd;
   border-radius: 0 30px 0 30px;
   img {

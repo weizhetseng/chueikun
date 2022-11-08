@@ -2,11 +2,76 @@
   overflow: hidden;
   background: url("/src/assets/image/banner/CHUEIKUN.png") no-repeat;
   background-position: top 810px left 0px;
+  .img_area {
+    display: flex;
+  }
+  .banner_contact {
+    width: 10%;
+    display: flex;
+    position: relative;
+    & > div {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    p {
+      writing-mode: vertical-lr;
+      color: $red;
+      margin-bottom: 20px;
+    }
+    .contact_link {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .line {
+      width: 2px;
+      height: 100px;
+      display: block;
+      margin-top: 20px;
+      background: $red;
+    }
+    @include lg {
+      p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .contact_link {
+        gap: 10px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .line {
+        margin-top: 10px;
+        height: 80px;
+      }
+    }
+    @include md {
+      display: none;
+    }
+  }
+  .banner_swiper {
+    width: 90%;
+    @include md {
+      width: 100%;
+    }
+  }
   .banner_home {
-    padding-left: 10%;
+    width: 100%;
+    border-radius: 0 0 0 20px;
+    @include md {
+      padding-left: 5%;
+    }
   }
   .hot_news_list {
     padding: 0;
+    margin-top: 80px;
     margin-bottom: 120px;
     @include lg {
       margin-bottom: 60px;
@@ -27,6 +92,12 @@
             display: flex;
             justify-content: space-between;
             color: #000;
+            @include sm {
+              flex-direction: column;
+              span {
+                align-self: flex-end;
+              }
+            }
           }
         }
         .button_area {
@@ -80,7 +151,16 @@
 
   .swiperBox {
     position: relative;
-    padding: 0 50px;
+    padding: 0 150px;
+    @include xl {
+      padding: 0 100px;
+    }
+    @include md {
+      padding: 0 60px;
+    }
+    @include sm {
+      padding: 0 35px;
+    }
   }
 
   .recommend_swiper {
