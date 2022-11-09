@@ -8,7 +8,7 @@
       />
       <btnBanner></btnBanner>
     </div>
-    <div class="container productitem">
+    <div class="container">
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
@@ -22,6 +22,8 @@
         <h2>線上購物</h2>
         <p>Promotional &nbsp Items</p>
       </div>
+    </div>
+    <div class="container-fluid productitem">
       <div class="row">
         <div class="list d-none d-lg-block">
           <btnProductList></btnProductList>

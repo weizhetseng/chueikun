@@ -194,10 +194,13 @@
 .productitem {
   margin-bottom: 80px;
   & > .row {
-    justify-content: space-between;
+    justify-content: end;
   }
   .list {
-    width: 25%;
+    width: 20%;
+    @include xl{
+      width: 25%;
+    }
   }
   .main {
     width: 70%;

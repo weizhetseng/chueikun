@@ -1,11 +1,13 @@
 <template>
-  <div class="calculate">
-    <div class="calculate_btn" @click="subtract()">
-      <i class="fa-solid fa-minus"></i>
-    </div>
-    <p class="calculate_num">{{ count }}</p>
-    <div class="calculate_btn" @click="add()">
-      <i class="fa-solid fa-plus"></i>
+  <div class="btn_calculate">
+    <div class="calculate">
+      <div class="calculate_btn" @click="subtract()">
+        <i class="fa-solid fa-minus"></i>
+      </div>
+      <p class="calculate_num">{{ count }}</p>
+      <div class="calculate_btn" @click="add()">
+        <i class="fa-solid fa-plus"></i>
+      </div>
     </div>
   </div>
 </template>
