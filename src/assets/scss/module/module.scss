@@ -146,12 +146,12 @@
   justify-content: center;
   width: 180px;
   height: 60px;
-  background: url("/src/assets/image/other/button_bg_active.png") no-repeat
+  background: url("/src/assets/img/global/button_bg_active.png") no-repeat
     center;
   background-size: contain;
   color: #fff;
   &:hover {
-    background: url("/src/assets/image/other/button_bg.png") no-repeat center;
+    background: url("/src/assets/img/global/button_bg.png") no-repeat center;
     background-size: contain;
     color: $red;
   }
@@ -163,11 +163,11 @@
   justify-content: center;
   width: 180px;
   height: 60px;
-  background: url("/src/assets/image/other/button_bg.png") no-repeat center;
+  background: url("/src/assets/img/global/button_bg.png") no-repeat center;
   background-size: contain;
   color: $red;
   &:hover {
-    background: url("/src/assets/image/other/button_bg_active.png") no-repeat
+    background: url("/src/assets/img/global/button_bg_active.png") no-repeat
       center;
     background-size: contain;
     color: #fff;
@@ -185,7 +185,7 @@ button {
   justify-content: center;
   width: 145px;
   height: 50px;
-  background: url("/src/assets/image/other/customer.png") no-repeat center;
+  background: url("/src/assets/img/global/customer.png") no-repeat center;
   background-size: contain;
   color: #fff;
 }
@@ -195,7 +195,7 @@ button {
   justify-content: center;
   width: 145px;
   height: 50px;
-  background: url("/src/assets/image/other/shop-cart.png") no-repeat center;
+  background: url("/src/assets/img/global/shop-cart.png") no-repeat center;
   background-size: contain;
   color: #fff;
 }
@@ -205,7 +205,7 @@ button {
   justify-content: center;
   width: 145px;
   height: 50px;
-  background: url("/src/assets/image/other/shopping.png") no-repeat center;
+  background: url("/src/assets/img/global/shopping.png") no-repeat center;
   background-size: contain;
   color: #fff;
 }
@@ -653,6 +653,9 @@ button {
   border-radius: 0 30px 0 30px;
   img {
     width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 0 30px 0 30px;
   }
   .card_text {
     padding: 10px;

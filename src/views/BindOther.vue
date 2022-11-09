@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_member.png"
+        src="../assets/img/banner/v1/banner-member.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">會員專區</li>
@@ -30,7 +30,7 @@
         <div class="main">
           <div class="form_style">
             <label for="">
-              <img src="../assets/image/other/facebook.png" alt="" />
+              <img src="../assets/img/global/facebook.png" alt="" />
               Facebook
             </label>
             <div class="bind_status">
@@ -40,7 +40,7 @@
           </div>
           <div class="form_style">
             <label for="">
-              <img src="../assets/image/other/line.png" alt="" />
+              <img src="../assets/img/global/line.png" alt="" />
               LINE
             </label>
             <div class="bind_status">
@@ -50,7 +50,7 @@
           </div>
           <div class="form_style">
             <label for="">
-              <img src="../assets/image/other/google.png" alt="" />
+              <img src="../assets/img/global/google.png" alt="" />
               GOOGLE
             </label>
             <div class="bind_status">

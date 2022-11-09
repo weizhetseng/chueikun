@@ -4,7 +4,7 @@ body {
   line-height: 1.5;
 }
 .page {
-  background: url("/src/assets/image/banner/CHUEIKUN.png") no-repeat;
+  background: url("/src/assets/img/global/CHUEIKUN.png") no-repeat;
   background-position: top 300px left 0px;
   z-index: -1;
   @include xl {
@@ -34,7 +34,7 @@ body {
     background: $red;
     h1 {
       a {
-        background: url("/src/assets/image/header/logo_2.png") center no-repeat;
+        background: url("/src/assets/img/logo/logo_2.png") center no-repeat;
         background-size: cover;
       }
     }
@@ -53,7 +53,7 @@ body {
       width: 220px;
       height: 80px;
       display: block;
-      background: url("/src/assets/image/header/logo_1.png") center no-repeat;
+      background: url("/src/assets/img/logo/logo_1.png") center no-repeat;
       background-size: cover;
       text-indent: 101%;
       white-space: nowrap;

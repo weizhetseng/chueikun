@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_member.png"
+        src="../assets/img/banner/v1/banner-member.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">會員專區</li>

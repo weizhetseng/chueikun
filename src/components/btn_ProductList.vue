@@ -5,7 +5,7 @@
         <input id="search" type="text" placeholder="關鍵字商品搜尋" />
       </div>
       <label for="search">
-        <img src="../assets/image/other/search.png" alt="" />
+        <img src="../assets/img/product/search.png" alt="" />
       </label>
     </div>
     <ul>

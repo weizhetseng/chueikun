@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_about.png"
+        src="../assets/img/banner/v1/banner-about.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">關於垂坤</li>
@@ -43,8 +43,8 @@
           </p>
         </div>
         <div class="col-xl-6 img_area">
-          <img src="../assets/image/about/about01.jpg" alt="" />
-          <img class="sm_img" src="../assets/image/about/about02.jpg" alt="" />
+          <img src="../assets/img/about/about01.jpg" alt="" />
+          <img class="sm_img" src="../assets/img/about/about02.jpg" alt="" />
         </div>
       </div>
       <div class="button_area">

@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_shopping-car.png"
+        src="../assets/img/banner/v1/banner-login.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">會員登入</li>
@@ -53,13 +53,13 @@
             <p>其他方式登入</p>
             <div>
               <RouterLink to="">
-                <img src="../assets/image/other/facebook.png" alt="" />
+                <img src="../assets/img/global/facebook.png" alt="" />
               </RouterLink>
               <RouterLink to="">
-                <img src="../assets/image/other/line.png" alt="" />
+                <img src="../assets/img/global/line.png" alt="" />
               </RouterLink>
               <RouterLink to="">
-                <img src="../assets/image/other/google.png" alt="" />
+                <img src="../assets/img/global/google.png" alt="" />
               </RouterLink>
             </div>
           </div>

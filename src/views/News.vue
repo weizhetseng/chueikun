@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_news.png"
+        src="../assets/img/banner/v1/banner-news.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">最新消息</li>
@@ -34,10 +34,7 @@
                   <h4>{{ item.title }}</h4>
                 </div>
                 <p>{{ item.content }}</p>
-                <RouterLink to="/newsdetail">
-                  了解更多
-                  <img src="../assets/image/other/coderwall.png" alt="" />
-                </RouterLink>
+                <RouterLink to="/newsdetail"> 了解更多 </RouterLink>
               </div>
             </li>
           </ul>
@@ -112,7 +109,7 @@ export default {
   },
   methods: {
     imageUrl(name) {
-      return new URL(`/src/assets/image/news/${name}`, import.meta.url).href;
+      return new URL(`/src/assets/img/news/${name}`, import.meta.url).href;
     },
   },
   components: { btnBanner, btnPagination },

@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_shopping.png"
+        src="../assets/img/banner/v1/banner-shopping.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">線上購物</li>
@@ -76,7 +76,7 @@ export default {
     return {
       product: [
         {
-          img: "product01.png",
+          img: "product01.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
@@ -91,12 +91,12 @@ export default {
           price: "150",
         },
         {
-          img: "product04.png",
+          img: "product04.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "product01.png",
+          img: "product01.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
@@ -111,7 +111,7 @@ export default {
           price: "150",
         },
         {
-          img: "product04.png",
+          img: "product04.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
@@ -120,7 +120,8 @@ export default {
   },
   methods: {
     imageUrl(name) {
-      return new URL(`/src/assets/image/product/${name}`, import.meta.url).href;
+      return new URL(`/src/assets/img/product-item/${name}`, import.meta.url)
+        .href;
     },
   },
   components: { btnBanner, btnProductList, btncalculate, btnPagination },

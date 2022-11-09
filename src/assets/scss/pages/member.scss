@@ -280,7 +280,7 @@
       input[type="date"]::-webkit-calendar-picker-indicator {
         position: relative;
         right: 0;
-        background: url(/src/assets/image/other/calendar.png) no-repeat center;
+        background: url("/src/assets/img/global/calendar.png") no-repeat center;
         background-size: contain;
       }
     }
@@ -658,7 +658,7 @@
       input[type="date"]::-webkit-calendar-picker-indicator {
         position: relative;
         right: 0;
-        background: url(/src/assets/image/other/calendar.png) no-repeat center;
+        background: url("/src/assets/img/global/calendar.png") no-repeat center;
         background-size: contain;
       }
     }

@@ -4,6 +4,8 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
 
+//aos 引入
+
 //bootstrap 引入
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";

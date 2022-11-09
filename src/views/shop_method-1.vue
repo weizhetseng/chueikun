@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_shopping.png"
+        src="../assets/img/banner/v1/banner-shopinfo.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">線上購物</li>
@@ -35,15 +35,15 @@
           <div class="shop_methods">
             <RouterLink to="">
               網路訂購
-              <img src="../assets/image/other/computer-line.png" alt="" />
+              <img src="../assets/img/product/computer-line.png" alt="" />
             </RouterLink>
             <RouterLink to="">
               電話訂購
-              <img src="../assets/image/other/telephone-fill.png" alt="" />
+              <img src="../assets/img/product/telephone-fill.png" alt="" />
             </RouterLink>
             <RouterLink to="">
               我要開團
-              <img src="../assets/image/other/people-group-solid.png" alt="" />
+              <img src="../assets/img/product/people-group-solid.png" alt="" />
             </RouterLink>
           </div>
 
@@ -73,7 +73,7 @@
                 <div class="info_active">
                   <img
                     class="info_img"
-                    src="../assets/image/other/logotag.png"
+                    src="../assets/img/product/logotag.png"
                     alt=""
                   />
                   <div class="info_text">
@@ -84,7 +84,7 @@
                 <div class="info">
                   <img
                     class="info_img"
-                    src="../assets/image/other/logotag.png"
+                    src="../assets/img/product/logotag.png"
                     alt=""
                   />
                   <h3>{{ item.title }}</h3>
@@ -107,27 +107,27 @@ export default {
       activeClass: 0,
       hots: [
         {
-          url: "hot_img1.jpg",
+          url: "product01.jpg",
           title: "肉鬆系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
         {
-          url: "hot_img2.png",
+          url: "product04.jpg",
           title: "豬肉系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
         {
-          url: "hot_img3.png",
+          url: "product05.jpg",
           title: "魚製品系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
         {
-          url: "hot_img4.jpg",
+          url: "product06.jpg",
           title: "休閒食品系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
         {
-          url: "hot_img5.jpg",
+          url: "product07.jpg",
           title: "餅乾系列",
           text: "純熟的古法手工烘焙，香酥鮮脆，獨特醬料調製入味，絲絲鬆軟酥脆的口感，入喉後餘留的甘甜滋味，令人難以停口。",
         },
@@ -139,7 +139,8 @@ export default {
       this.activeClass = item;
     },
     imageUrl(name) {
-      return new URL(`/src/assets/image/other/${name}`, import.meta.url).href;
+      return new URL(`/src/assets/img/product-item/${name}`, import.meta.url)
+        .href;
     },
   },
   components: { btnBanner, btnProductList },

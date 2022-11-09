@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_member.png"
+        src="../assets/img/banner/v1/banner-member.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">會員專區</li>
@@ -152,7 +152,7 @@
               <div class="tr" v-for="item in order" :key="item.tag">
                 <div class="td">
                   <div class="product_item">
-                    <img :src="item.imgUrl" alt="" />
+                    <img :src="imageUrl(item.imgUrl)" alt="" />
                     <div>
                       {{ item.title }}
                     </div>
@@ -178,21 +178,21 @@ export default {
     return {
       order: [
         {
-          imgUrl: "src/assets/image/product/shopping_car01.png",
+          imgUrl: "product05.jpg",
           title: "[新品]肉鬆小脆餅",
 
           price: "1480",
           total: "1480",
         },
         {
-          imgUrl: "src/assets/image/product/shopping_car02.png",
+          imgUrl: "product06.jpg",
           title: "麻辣豬肉片",
 
           price: "1480",
           total: "1480",
         },
         {
-          imgUrl: "src/assets/image/product/shopping_car03.png",
+          imgUrl: "product07.jpg",
           title: "巴西嘉年華-咖啡豆",
 
           price: "1480",
@@ -200,6 +200,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    imageUrl(name) {
+      return new URL(`/src/assets/img/product-item/${name}`, import.meta.url)
+        .href;
+    },
   },
   components: { btnBanner, btnMemberList },
 };

@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_shopping.png"
+        src="../assets/img/banner/v1/banner-shopping.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">線上購物</li>
@@ -34,36 +34,25 @@
                 :thumbs="{ swiper: thumbsSwiper }"
                 class="main_swiper"
               >
-                <swiper-slide>
+                <swiper-slide
+                  v-for="(item, index) in product_swiper"
+                  :key="item.img"
+                >
                   <div>
                     <div class="tag">
                       <p>經典熱銷</p>
                       <p>人氣推薦</p>
                     </div>
-                    <img src="/src/assets/image/product/product01.png" />
+                    <img :src="imageUrl(item.img)" />
                     <span
                       class="material-icons-outlined"
-                      @click="overlaystatus = !overlaystatus"
+                      data-bs-toggle="modal"
+                      data-bs-target="#lightbox"
+                      @click="toggle(item)"
                     >
                       search
                     </span>
                   </div>
-                </swiper-slide>
-                <swiper-slide>
-                  <div class="tag">
-                    <p>經典熱銷</p>
-                    <p>人氣推薦</p>
-                  </div>
-                  <img src="/src/assets/image/product/product02.png" />
-                  <span class="material-icons-outlined"> search </span>
-                </swiper-slide>
-                <swiper-slide>
-                  <div class="tag">
-                    <p>經典熱銷</p>
-                    <p>人氣推薦</p>
-                  </div>
-                  <img src="/src/assets/image/product/product03.png" />
-                  <span class="material-icons-outlined"> search </span>
                 </swiper-slide>
               </swiper>
 
@@ -75,14 +64,8 @@
                 @swiper="setThumbsSwiper"
                 class="thumb_swiper"
               >
-                <swiper-slide>
-                  <img src="/src/assets/image/product/product01.png" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="/src/assets/image/product/product02.png" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="/src/assets/image/product/product03.png" />
+                <swiper-slide v-for="item in product_swiper" :key="item.img">
+                  <img :src="imageUrl(item.img)" />
                 </swiper-slide>
               </swiper>
             </div>
@@ -187,18 +170,30 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="mask" v-if="overlaystatus">
-      <div class="close">
-        <span
-          class="material-icons-outlined"
-          @click="overlaystatus = !overlaystatus"
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="lightbox"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
         >
-          close
-        </span>
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <img :src="imageUrl(showList.img)" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
-      <img src="/src/assets/image/product/product01.png" alt="" />
     </div>
   </div>
 </template>
@@ -213,14 +208,16 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Thumbs } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import { addClass } from "dom7";
 
 export default {
   data() {
     return {
       overlaystatus: false,
+      showList: {},
       product: [
         {
-          img: "product01.png",
+          img: "product01.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
@@ -235,12 +232,12 @@ export default {
           price: "150",
         },
         {
-          img: "product04.png",
+          img: "product04.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "product01.png",
+          img: "product01.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
@@ -255,16 +252,31 @@ export default {
           price: "150",
         },
         {
-          img: "product04.png",
+          img: "product04.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
+        },
+      ],
+      product_swiper: [
+        {
+          img: "product01.jpg",
+        },
+        {
+          img: "product02.png",
+        },
+        {
+          img: "product03.png",
         },
       ],
     };
   },
   methods: {
     imageUrl(name) {
-      return new URL(`/src/assets/image/product/${name}`, import.meta.url).href;
+      return new URL(`/src/assets/img/product-item/${name}`, import.meta.url)
+        .href;
+    },
+    toggle(item) {
+      this.showList = { ...item };
     },
   },
   components: { btnBanner, btnProductList, btncalculate, Swiper, SwiperSlide },

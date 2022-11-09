@@ -3,7 +3,7 @@
     <ul>
       <li>
         <a href="#">
-          <img src="../assets/image/other/left.png" alt="" />
+          <img src="../assets/img/other/left.png" alt="" />
         </a>
       </li>
       <li>
@@ -20,7 +20,7 @@
       </li>
       <li>
         <a href="#">
-          <img src="../assets/image/other/right.png" alt="" />
+          <img src="../assets/img/other/right.png" alt="" />
         </a>
       </li>
     </ul>

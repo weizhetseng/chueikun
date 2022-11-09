@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_news.png"
+        src="../assets/img/banner/v1/banner-news.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">最新消息</li>
@@ -37,8 +37,8 @@
             室。說斤您春服門月犬重那學河乍冒。
           </p>
           <div class="img_area">
-            <img src="../assets/image/news/news05.png" alt="" />
-            <img src="../assets/image/news/news06.png" alt="" />
+            <img src="../assets/img/news/news05.png" alt="" />
+            <img src="../assets/img/news/news06.png" alt="" />
           </div>
         </div>
       </div>

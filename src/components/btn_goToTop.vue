@@ -1,6 +1,6 @@
 <template>
   <div class="toTop" @click="scrollToTop()">
-    <img src="../assets/image/other/goTop.png" alt="" />
+    <img src="../assets/img/global/goTop.png" alt="" />
   </div>
 </template>
 

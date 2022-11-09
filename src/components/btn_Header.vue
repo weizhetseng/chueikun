@@ -52,7 +52,7 @@
         <ul class="box_link">
           <li class="box1">
             <RouterLink to="" data-bs-toggle="modal" data-bs-target="#liar">
-              <img src="../assets/image/header/user01.png" alt="" />
+              <img src="../assets/img/global/user01.png" alt="" />
               <div>
                 <p>詐騙手法</p>
                 <p>大公開</p>
@@ -62,13 +62,13 @@
           <li class="box2">
             <RouterLink to="/shoppingcart">
               <span>2</span>
-              <img src="../assets/image/header/cart.png" alt="" />
+              <img src="../assets/img/global/cart.png" alt="" />
               <p>購物車</p>
             </RouterLink>
           </li>
           <li class="box3">
             <RouterLink to="/login">
-              <img src="../assets/image/header/user02.png" alt="" />
+              <img src="../assets/img/global/user02.png" alt="" />
               <p>會員專區</p>
             </RouterLink>
           </li>
@@ -174,13 +174,13 @@
       <li>
         <RouterLink to="/login" class="down_link link1">
           會員專區
-          <img src="../assets/image/header/user02.png" alt="" />
+          <img src="../assets/img/global/user02.png" alt="" />
         </RouterLink>
       </li>
       <li>
         <RouterLink to="/shoppingcart" class="down_link link2">
           購物車
-          <img src="../assets/image/header/cart.png" alt="" />
+          <img src="../assets/img/global/cart.png" alt="" />
           <span>0</span>
         </RouterLink>
       </li>
@@ -192,7 +192,7 @@
           class="down_link link3"
         >
           詐騙手法大公開
-          <img src="../assets/image/header/user01.png" alt="" />
+          <img src="../assets/img/global/user01.png" alt="" />
         </RouterLink>
       </li>
     </ul>

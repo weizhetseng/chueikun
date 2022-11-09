@@ -44,6 +44,7 @@ import btnHeader from "@/components/btn_Header.vue";
 import btnFooter from "@/components/btn_Footer.vue";
 import top from "./components/btn_goToTop.vue";
 import { Modal } from "bootstrap";
+
 export default {
   methods: {
     processLoad() {

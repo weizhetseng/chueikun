@@ -6,9 +6,9 @@
           <div>
             <p>FOLLOW US</p>
             <div class="contact_link">
-              <img src="../assets/image/other/ig.png" alt="" />
-              <img src="../assets/image/other/fb.png" alt="" />
-              <img src="../assets/image/other/line2.png" alt="" />
+              <img src="../assets/img/global/ig.png" alt="" />
+              <img src="../assets/img/global/fb.png" alt="" />
+              <img src="../assets/img/global/line2.png" alt="" />
             </div>
             <div class="line"></div>
           </div>
@@ -26,14 +26,14 @@
           <swiper-slide>
             <img
               class="banner_home"
-              src="../assets/image/banner/banner.png"
+              src="../assets/img/banner/v1/banner-home1.jpg"
               alt=""
             />
           </swiper-slide>
           <swiper-slide>
             <img
               class="banner_home"
-              src="../assets/image/banner/banner2.png"
+              src="../assets/img/banner/v1/banner-home2.jpg"
               alt=""
             />
           </swiper-slide>
@@ -51,9 +51,9 @@
             <h2>最新消息</h2>
             <p>Hot news</p>
           </div>
-          <ul v-for="item in news" :key="item.title">
+          <ul v-for="item in news" :key="item.title" data-aos="fade-right">
             <li>
-              <img src="../assets/image/home/hot_news_tag.png" alt="" />
+              <img src="../assets/img/other/hot_news_tag.png" alt="" />
               <a href="#">
                 <p>{{ item.title }}</p>
                 <span>{{ item.date }}</span>
@@ -64,8 +64,8 @@
             <RouterLink to="/news" class="button">了解更多</RouterLink>
           </div>
         </div>
-        <div class="col-lg-5 hot_news_list_img">
-          <img src="../assets/image/home/home01.png" alt="" />
+        <div class="col-lg-5 hot_news_list_img" data-aos="fade-left">
+          <img src="../assets/img/other/hotNews.png" alt="" />
         </div>
       </div>
     </div>
@@ -150,6 +150,8 @@
 <script>
 import btnBanner from "@/components/btn_Banner.vue";
 import btncalculate from "../components/btn_calculate.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 import "swiper/css";
@@ -182,7 +184,7 @@ export default {
       ],
       product: [
         {
-          img: "product01.png",
+          img: "product01.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
@@ -197,12 +199,12 @@ export default {
           price: "150",
         },
         {
-          img: "product04.png",
+          img: "product04.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
         {
-          img: "product01.png",
+          img: "product01.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
@@ -217,7 +219,7 @@ export default {
           price: "150",
         },
         {
-          img: "product04.png",
+          img: "product04.jpg",
           title: "[新品]肉鬆小脆餅",
           price: "150",
         },
@@ -226,7 +228,8 @@ export default {
   },
   methods: {
     imageUrl(name) {
-      return new URL(`/src/assets/image/product/${name}`, import.meta.url).href;
+      return new URL(`/src/assets/img/product-item/${name}`, import.meta.url)
+        .href;
     },
   },
   components: { btnBanner, Swiper, SwiperSlide, btncalculate },
@@ -234,6 +237,9 @@ export default {
     return {
       modules: [Pagination, Scrollbar, Navigation, EffectFade, Autoplay],
     };
+  },
+  created() {
+    AOS.init();
   },
 };
 </script>

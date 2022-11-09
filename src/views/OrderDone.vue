@@ -3,7 +3,7 @@
     <div class="banner">
       <img
         class="banner_img"
-        src="../assets/image/banner/banner_shopping-car.png"
+        src="../assets/img/banner/v1/banner-cart.jpg"
         alt=""
       />
       <btnBanner></btnBanner>
@@ -12,7 +12,7 @@
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
-            <img src="../assets/image/other/home.png" alt="" />
+            <img src="../assets/img/global/home.png" alt="" />
           </RouterLink>
         </li>
         <li class="active">購物車</li>
@@ -174,26 +174,23 @@ export default {
     return {
       order: [
         {
-          imgUrl: "shopping_car01.png",
+          imgUrl: "product05.jpg",
           title: "[新品]肉鬆小脆餅",
-          deliver: " 一般運送",
-          tag: "10110",
+
           price: "1480",
           total: "1480",
         },
         {
-          imgUrl: "shopping_car02.png",
+          imgUrl: "product06.jpg",
           title: "麻辣豬肉片",
-          deliver: " 一般運送",
-          tag: "10318",
+
           price: "1480",
           total: "1480",
         },
         {
-          imgUrl: "shopping_car03.png",
+          imgUrl: "product07.jpg",
           title: "巴西嘉年華-咖啡豆",
-          deliver: " 一般運送",
-          tag: "11014",
+
           price: "1480",
           total: "1480",
         },
@@ -202,7 +199,8 @@ export default {
   },
   methods: {
     imageUrl(name) {
-      return new URL(`/src/assets/image/product/${name}`, import.meta.url).href;
+      return new URL(`/src/assets/img/product-item/${name}`, import.meta.url)
+        .href;
     },
   },
   components: { btnBanner },
