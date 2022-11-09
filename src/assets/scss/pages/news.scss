@@ -1,7 +1,9 @@
 .news {
   .news_card {
     margin-bottom: 40px;
-
+    .news_card_img {
+      border-radius: 30px;
+    }
     span {
       display: block;
       margin-bottom: 20px;

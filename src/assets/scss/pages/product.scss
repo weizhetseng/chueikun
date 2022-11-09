@@ -90,6 +90,7 @@
     align-items: center;
     overflow: hidden;
     transition: 0.25s;
+
     .options {
       display: flex;
       flex-direction: row;
@@ -119,7 +120,8 @@
         }
         &:not(.active) {
           flex-grow: 1;
-          filter: brightness(0.4);
+          background-blend-mode: darken;
+          background-color: rgba(0, 0, 0, 0.5);
           .info_active {
             display: none;
           }
@@ -139,7 +141,10 @@
         .info {
           top: 50%;
           transform: translateY(-50%);
-          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
         &:nth-child(4) {
           .info {
@@ -149,8 +154,37 @@
         .info_active {
           display: flex;
           align-items: center;
-
           bottom: 0;
+        }
+      }
+    }
+    @include md {
+      .options {
+        flex-direction: column;
+        height: 1000px;
+        max-width: none;
+        min-width: 0;
+        .option {
+          min-height: 90px;
+          .info {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+          &:nth-child(3) {
+            .info {
+              left: 51%;
+            }
+          }
+          &:nth-child(4) {
+            .info {
+              left: 53%;
+            }
+          }
         }
       }
     }

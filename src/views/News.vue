@@ -26,7 +26,11 @@
         <div class="col-lg-10">
           <ul>
             <li class="row news_card" v-for="item in news" :key="item.title">
-              <img class="col-lg-6" :src="imageUrl(item.imgUrl)" alt="" />
+              <img
+                class="col-lg-6 news_card_img"
+                :src="imageUrl(item.imgUrl)"
+                alt=""
+              />
               <div class="col-lg-6">
                 <span>{{ item.date }}</span>
                 <div class="card_title">
