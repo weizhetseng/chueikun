@@ -1,6 +1,6 @@
 body {
   padding: 80px 0 0 0;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: 微軟正黑體 sans-serif;
   line-height: 1.5;
 }
 .page {
@@ -68,7 +68,7 @@ body {
     position: relative;
     margin-left: auto;
     display: flex;
-    margin-right: 10px;
+    margin-right: 80px;
     .nav-item {
       &:hover {
         .submenu {
@@ -93,6 +93,10 @@ body {
       justify-content: center;
       width: 80px;
       height: 80px;
+      p {
+        font-size: 18px;
+        font-weight: bold;
+      }
     }
   }
   .box_link {
@@ -396,7 +400,7 @@ footer {
     padding: 50px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     color: #fff;
     @include lg {
       padding: 0;
@@ -410,6 +414,7 @@ footer {
     li {
       width: 33%;
       margin-bottom: 20px;
+      font-size: 18px;
       @include lg {
         text-align: center;
       }
@@ -418,6 +423,7 @@ footer {
   .footer_contact {
     display: flex;
     margin-bottom: 20px;
+    font-size: 20px;
   }
   .copyRight {
     background: $yellow;

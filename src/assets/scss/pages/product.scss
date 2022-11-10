@@ -148,7 +148,10 @@
             display: none;
           }
         }
-        .info_active,
+        .info_active {
+          position: absolute;
+          color: #fff;
+        }
         .info {
           position: absolute;
           color: #fff;

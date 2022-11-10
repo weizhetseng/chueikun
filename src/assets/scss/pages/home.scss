@@ -98,17 +98,25 @@
         li {
           display: flex;
           align-items: center;
+          gap: 20px;
           border-bottom: 1px dashed #707070;
           padding: 20px 0;
           a {
             width: 100%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             color: #000;
+            p {
+              font-size: 20px;
+              font-weight: bold;
+            }
             @include sm {
               flex-direction: column;
+              align-items: flex-start;
               span {
                 align-self: flex-end;
+                font-size: 15px;
               }
             }
           }
@@ -168,7 +176,7 @@
     @include xl {
       padding: 0 100px;
     }
-    @include md {
+    @include lg {
       padding: 0 60px;
     }
     @include sm {

@@ -128,7 +128,14 @@
       width: 160px;
       left: -27px;
     }
-
+    h2 {
+      font-size: 30px;
+    }
+  }
+  @include lg {
+    &::before {
+      display: none;
+    }
     h2 {
       font-size: 30px;
     }
@@ -146,6 +153,7 @@
   justify-content: center;
   width: 180px;
   height: 60px;
+  font-size: 18px;
   background: url("/src/assets/img/global/button_bg_active.png") no-repeat
     center;
   background-size: contain;
@@ -163,6 +171,7 @@
   justify-content: center;
   width: 180px;
   height: 60px;
+  font-size: 18px;
   background: url("/src/assets/img/global/button_bg.png") no-repeat center;
   background-size: contain;
   color: $red;
@@ -415,10 +424,12 @@ button {
   label {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 7px;
     border-right: 1px solid #707070;
     padding-right: 20px;
     margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
   }
   input {
     width: 70%;
@@ -648,12 +659,12 @@ button {
   border: 1px solid #707070;
 
   .calculate_btn {
-    width: 30px;
+    width: 25px;
     height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 3px;
     i {
       color: #fff;
     }
@@ -665,7 +676,7 @@ button {
     }
   }
   .calculate_num {
-    padding: 0 10%;
+    padding: 0 5px;
   }
 }
 //產品卡片
@@ -705,7 +716,7 @@ button {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      padding: 5px;
+
       .btn_calculate {
         display: inline-block;
         margin-bottom: 2px;

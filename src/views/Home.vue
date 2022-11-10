@@ -112,11 +112,11 @@
             },
             '768': {
               slidesPerView: 3,
-              spaceBetween: 40,
+              spaceBetween: 20,
             },
-            '1024': {
+            '1200': {
               slidesPerView: 4,
-              spaceBetween: 50,
+              spaceBetween: 30,
             },
           }"
           :modules="modules"
