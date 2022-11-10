@@ -28,27 +28,27 @@
           <label for=""> <span class="text-danger">*</span>手機號碼 </label>
           <div class="captcha_input">
             <input type="text" placeholder="請輸入手機號碼" />
-            <a
-              href="#"
+            <button
               class="captcha"
               @click="postCaptcha()"
               v-show="!captchaStatus"
               :style="{ 'pointer-events': captchaStatus ? 'none' : 'auto' }"
-              >發送驗證碼</a
             >
+              發送驗證碼
+            </button>
           </div>
         </div>
         <div class="form_style">
           <label for=""><span class="text-danger">*</span> 驗證碼 </label>
           <div class="captcha_input">
             <input type="text" placeholder="請輸入簡訊驗證碼" />
-            <a
-              href=""
+            <button
               class="captcha"
               v-show="captchaStatus"
               :style="{ 'pointer-events': captchaStatus ? 'none' : 'auto' }"
-              >重發驗證碼({{ countDown }})</a
             >
+              重發驗證碼({{ countDown }})
+            </button>
           </div>
         </div>
         <div class="button_area">

@@ -22,7 +22,7 @@
         <h2>會員註冊</h2>
         <p>Sign &nbsp Up</p>
       </div>
-      <form action="">
+      <form>
         <div class="form_style">
           <p class="text-danger">*為必填項目</p>
           <div class="space"></div>
@@ -31,54 +31,55 @@
           <label for=""> <span class="text-danger">*</span>手機號碼 </label>
           <div class="captcha_input">
             <input type="text" placeholder="請輸入手機號碼" />
-            <a
-              href="#"
+            <button
               class="captcha"
               @click="postCaptcha()"
               v-show="!captchaStatus"
               :style="{ 'pointer-events': captchaStatus ? 'none' : 'auto' }"
-              >發送驗證碼</a
             >
+              發送驗證碼
+            </button>
           </div>
         </div>
         <div class="form_style">
           <label for=""><span class="text-danger">*</span> 驗證碼 </label>
           <div class="captcha_input">
             <input type="text" placeholder="請輸入手機驗證碼" />
-            <a
-              href=""
+            <button
               class="captcha"
               v-show="captchaStatus"
               :style="{ 'pointer-events': captchaStatus ? 'none' : 'auto' }"
-              >重發驗證碼({{ countDown }})</a
             >
+              重發驗證碼({{ countDown }})
+            </button>
           </div>
         </div>
         <div class="form_style">
           <label for=""> <span class="text-danger">*</span>E-mail </label>
           <div class="captcha_input">
             <input type="text" placeholder="請輸入E-mail" />
-            <a
-              href="#"
+            <button
+              type="button"
               class="captcha"
               @click="postCaptcha()"
               v-show="!captchaStatus"
               :style="{ 'pointer-events': captchaStatus ? 'none' : 'auto' }"
-              >發送驗證碼</a
             >
+              發送驗證碼
+            </button>
           </div>
         </div>
         <div class="form_style">
           <label for=""><span class="text-danger">*</span> 驗證碼 </label>
           <div class="captcha_input">
             <input type="text" placeholder="請輸入E-mail信驗證碼" />
-            <a
-              href=""
+            <button
               class="captcha"
               v-show="captchaStatus"
               :style="{ 'pointer-events': captchaStatus ? 'none' : 'auto' }"
-              >重發驗證碼({{ countDown }})</a
             >
+              重發驗證碼({{ countDown }})
+            </button>
           </div>
         </div>
         <div class="form_style">
@@ -134,8 +135,8 @@
           </div>
         </div>
         <div class="button_area">
-          <RouterLink to="" class="button">清除</RouterLink>
-          <RouterLink to="" class="button">送出</RouterLink>
+          <button type="reset" class="button02">清除</button>
+          <button type="submit" class="button">送出</button>
         </div>
       </form>
     </div>
@@ -150,6 +151,7 @@ export default {
     return {
       captchaStatus: false,
       countDown: 0,
+      user: {},
     };
   },
   methods: {

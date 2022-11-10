@@ -54,7 +54,7 @@
           <ul v-for="item in news" :key="item.title" data-aos="fade-right">
             <li>
               <img src="../assets/img/other/hot_news_tag.png" alt="" />
-              <a href="#">
+              <a href="">
                 <p>{{ item.title }}</p>
                 <span>{{ item.date }}</span>
               </a>
@@ -145,11 +145,45 @@
       </div>
     </div>
   </div>
+  <div
+    class="modal fade"
+    id="main_modal"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="liarLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h3 class="modal-title" id="Label">職缺請上1111人力銀行查閱</h3>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <h4>在此聲明</h4>
+          <p>本公司</p>
+          <h4 class="company">垂坤食品有限公司</h4>
+          <p></p>
+          <p><span>沒有</span>在其他平台刊登網路小幫手及其他職缺</p>
+          <p>
+            請小心留意不實內容<br />
+            本公司的職缺及詳細工作內容，<br />
+            請上1111人力銀行查閱
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import btnBanner from "@/components/btn_Banner.vue";
 import btncalculate from "../components/btn_calculate.vue";
+import { Modal } from "bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -231,6 +265,11 @@ export default {
       return new URL(`/src/assets/img/product-item/${name}`, import.meta.url)
         .href;
     },
+    processLoad() {
+      const myModal = new Modal(document.getElementById("main_modal"));
+
+      myModal.show();
+    },
   },
   components: { btnBanner, Swiper, SwiperSlide, btncalculate },
   setup() {
@@ -240,6 +279,9 @@ export default {
   },
   created() {
     AOS.init();
+  },
+  mounted() {
+    window.addEventListener("load", () => this.processLoad());
   },
 };
 </script>

@@ -165,7 +165,7 @@
           <RouterLink to="/location" class="nav-link">營業據點</RouterLink>
         </li>
         <li class="page_link">
-          <a href="#" class="nav-link">訂單下載</a>
+          <a href="" class="nav-link">訂單下載</a>
         </li>
       </ul>
     </div>
