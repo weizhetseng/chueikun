@@ -20,9 +20,26 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        background: url("/src/assets/img/other/coderwall.png") no-repeat center;
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
       &:hover {
         background: $red;
         color: #fff;
+        &::after {
+          background: url("/src/assets/img/other/coderwall01.png") no-repeat
+            center;
+          background-size: cover;
+        }
       }
       @include md {
         width: 50%;
@@ -79,6 +96,30 @@
     right: 30px;
     li {
       background: $red;
+      &:first-child {
+        a {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            background: url("/src/assets/img/other/coderwall03.png") no-repeat
+              center;
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            right: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &:hover {
+            &::after {
+              background: url("/src/assets/img/other/coderwall04.png") no-repeat
+                center;
+              background-size: cover;
+            }
+          }
+        }
+      }
       a {
         display: block;
         padding: 10px 20px;

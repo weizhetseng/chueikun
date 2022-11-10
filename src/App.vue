@@ -44,6 +44,8 @@ import btnHeader from "@/components/btn_Header.vue";
 import btnFooter from "@/components/btn_Footer.vue";
 import top from "./components/btn_goToTop.vue";
 import { Modal } from "bootstrap";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default {
   methods: {
@@ -57,5 +59,8 @@ export default {
     window.addEventListener("load", () => this.processLoad());
   },
   components: { RouterLink, RouterView, btnHeader, btnFooter, top },
+  created() {
+    AOS.init();
+  },
 };
 </script>

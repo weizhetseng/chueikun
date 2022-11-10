@@ -55,10 +55,10 @@
             <div class="td">{{ item.price }}元</div>
             <div class="td item_total">{{ item.total }}元</div>
             <div class="td">
-              <div class="delete">
+              <a href="" class="delete">
                 <span class="material-symbols-outlined"> delete </span>
                 刪除
-              </div>
+              </a>
             </div>
           </div>
           <div class="tr product_price">
