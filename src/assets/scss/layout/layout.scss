@@ -74,7 +74,11 @@ body {
     position: relative;
     margin-left: auto;
     display: flex;
+    gap: 25px;
     margin-right: 80px;
+    @include xl {
+      margin-right: 60px;
+    }
     .nav-item {
       &:hover {
         .submenu {

@@ -213,117 +213,205 @@ button {
   color: #fff;
 }
 
-//產品表格樣式
-.product_table {
-  width: 100%;
-  display: table;
-  border-collapse: separate;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.3);
-  .thead {
-    display: table-header-group;
-    background: $red;
-    color: #fff;
-    text-align: center;
-    .th {
-      display: table-cell;
-    }
+//大畫面產品表格樣式
+.table_xl {
+  @include md {
+    display: none;
   }
-  .tr {
-    display: table-row;
-  }
-  .tbody {
-    display: table-header-group;
-
-    .td {
-      min-width: 110px;
-      display: table-cell;
+  .product_table {
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.3);
+    .thead {
+      display: table-header-group;
+      background: $red;
+      color: #fff;
       text-align: center;
-      vertical-align: middle;
-      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
-      .product_item {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        img {
-          width: 150px;
-          height: 150px;
-          border-radius: 10px;
-          object-fit: cover;
-          object-position: center;
-          box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.2);
-        }
-        @include lg {
-          flex-direction: column;
-        }
-      }
-      .delivery,
-      .code {
-        display: flex;
-      }
-      .delete {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: rgb(107, 102, 102);
-        span {
-          vertical-align: middle;
-        }
-      }
-      &.item_total {
-        color: $red;
+      .th {
+        display: table-cell;
       }
     }
+    .tr {
+      display: table-row;
+    }
+    .tbody {
+      display: table-header-group;
 
-    .product_price,
-    .product_total {
       .td {
-        border-bottom: 1px dashed rgba($color: #000000, $alpha: 0.1);
-        &:first-child {
-          text-align: left;
-          p {
-            &:first-child {
-              margin-bottom: 10px;
-            }
+        min-width: 110px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+        .product_item {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          img {
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+            box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.2);
+          }
+          @include lg {
+            flex-direction: column;
           }
         }
-        &:last-child {
+        .delivery,
+        .code {
+          display: flex;
+        }
+        .delete {
           display: flex;
           align-items: center;
           justify-content: center;
-          text-align: right;
-          p {
-            &:first-child {
-              margin-bottom: 10px;
+          color: rgb(107, 102, 102);
+          span {
+            vertical-align: middle;
+          }
+        }
+        &.item_total {
+          color: $red;
+        }
+      }
+
+      .product_price,
+      .product_total {
+        .td {
+          border-bottom: 1px dashed rgba($color: #000000, $alpha: 0.1);
+          &:first-child {
+            text-align: left;
+            p {
+              &:first-child {
+                margin-bottom: 10px;
+              }
+            }
+          }
+          &:last-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: right;
+            p {
+              &:first-child {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+      .product_price {
+        .td {
+          &:last-child {
+            p {
+              &:first-child {
+                color: #bbb;
+                text-decoration: line-through;
+              }
+              &:last-child {
+                color: $red;
+              }
             }
           }
         }
       }
     }
-    .product_price {
-      .td {
-        &:last-child {
-          p {
-            &:first-child {
-              color: #bbb;
-              text-decoration: line-through;
-            }
-            &:last-child {
-              color: $red;
-            }
-          }
-        }
-      }
-    }
-  }
-  @include md {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
   }
 }
+
+//小畫面產品表格樣式
+.table_sm {
+  display: none;
+  @include md {
+    display: block;
+  }
+  .product_table {
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.3);
+    .thead {
+      display: table-header-group;
+      background: $red;
+      color: #fff;
+      text-align: center;
+      .th {
+        display: table-cell;
+      }
+    }
+    .tr {
+      display: table-row;
+    }
+    .tbody {
+      display: table-header-group;
+      .td {
+        min-width: 110px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+        .product_item {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+          img {
+            border-radius: 10px;
+            box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.2);
+          }
+          .delivery,
+          .code {
+            display: flex;
+          }
+        }
+        .calculate {
+          width: 50%;
+          margin: 0 auto;
+        }
+
+        .delete {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: rgb(107, 102, 102);
+          span {
+            vertical-align: middle;
+          }
+        }
+        &.item_total {
+          color: $red;
+        }
+      }
+
+      .product_price,
+      .product_total {
+        .td {
+          border-bottom: 1px dashed rgba($color: #000000, $alpha: 0.1);
+        }
+      }
+      .product_price {
+        .td {
+          div {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+      .product_total {
+        .td {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
 //顧客表格樣式
 .customer_table {
   width: 100%;
@@ -357,60 +445,122 @@ button {
   }
 }
 //訂單確認表格樣式
-.pay_table {
-  margin-bottom: 40px;
-  width: 100%;
-  display: table;
-  border-collapse: separate;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.3);
-  .thead {
-    display: table-header-group;
-    background: $red;
-    color: #fff;
-    .th {
-      display: table-cell;
-      padding: 10px;
+.table_xl {
+  @include lg {
+    display: none;
+  }
+  .pay_table {
+    margin-bottom: 40px;
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.3);
+    .thead {
+      display: table-header-group;
+      background: $red;
+      color: #fff;
+      .th {
+        display: table-cell;
+        padding: 10px;
+      }
     }
-  }
-  .tr {
-    display: table-row;
-  }
-  .tbody {
-    display: table-header-group;
+    .tr {
+      display: table-row;
+    }
+    .tbody {
+      display: table-header-group;
 
-    .td {
-      min-width: 110px;
-      padding: 20px;
-      display: table-cell;
-      vertical-align: middle;
-      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
-      .pay_list {
-        display: flex;
-        margin-bottom: 20px;
-        > div {
+      .td {
+        min-width: 110px;
+        padding: 20px;
+        display: table-cell;
+        vertical-align: middle;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+        .pay_list {
           display: flex;
-          gap: 10px;
-          @include xl {
-            flex-direction: column;
+          margin-bottom: 20px;
+          > div {
+            display: flex;
+            gap: 10px;
+            @include xl {
+              flex-direction: column;
+            }
+          }
+          h4 {
+            width: 101px;
+            border-right: 1px solid #707070;
+            margin-right: 20px;
           }
         }
-        h4 {
-          width: 101px;
-          border-right: 1px solid #707070;
-          margin-right: 20px;
+      }
+    }
+    @include lg {
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+}
+.table_sm {
+  display: none;
+  @include lg {
+    display: block;
+  }
+  .pay_table {
+    margin-bottom: 40px;
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 4px rgba($color: #000000, $alpha: 0.3);
+    .thead {
+      display: table-header-group;
+      background: $red;
+      color: #fff;
+      .th {
+        display: table-cell;
+        padding: 10px;
+      }
+    }
+    .tr {
+      display: table-row;
+    }
+    .tbody {
+      display: table-header-group;
+
+      .td {
+        min-width: 110px;
+        padding: 20px;
+        display: table-cell;
+        vertical-align: middle;
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+        .pay_list {
+          display: flex;
+          margin-bottom: 20px;
+          flex-wrap: wrap;
+          > div {
+            display: flex;
+            gap: 10px;
+            @include xl {
+              flex-direction: column;
+            }
+          }
+          h4 {
+            width: 101px;
+            border-right: 1px solid #707070;
+            margin-right: 20px;
+            margin-bottom: 10px;
+          }
         }
       }
     }
   }
-  @include lg {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
 }
+
 //表單輸入樣式
 .form_style {
   display: flex;
@@ -714,24 +864,36 @@ button {
   }
   .card_text {
     padding: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
     h4 {
-      font-size: 20px;
+      font-size: 18px;
+      margin-top: 8px;
       font-weight: bold;
       a {
         color: #000;
+        &:hover {
+          color: $red;
+        }
       }
     }
     .price {
-      font-size: 20px;
+      font-size: 17px;
       text-align: right;
-      margin-top: 20px;
+      margin-top: auto;
+      margin-bottom: 5px;
       color: $red;
     }
     .tag {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
       span {
         background: $red;
         color: #fff;
-        padding: 0 5px;
+        padding: 4px 10px;
+        font-size: 15px;
       }
     }
     .cal_btn {
@@ -751,8 +913,8 @@ button {
         justify-content: center;
         color: #fff;
         background: $red;
-        padding: 5px 10px;
-        font-size: 12px;
+        padding: 5px;
+        font-size: 14px;
         margin-bottom: 2px;
         span {
           font-size: 12px;

@@ -23,75 +23,141 @@
         <p>Shopping &nbsp Cart</p>
       </div>
       <h3>您的購物清單如下</h3>
-      <div class="table product_table">
-        <div class="thead">
-          <div class="tr">
-            <div class="th">商品名稱</div>
-            <div class="th">數量</div>
-            <div class="th">單價</div>
-            <div class="th">合計</div>
+      <div class="table_xl">
+        <div class="table product_table">
+          <div class="thead">
+            <div class="tr">
+              <div class="th">商品名稱</div>
+              <div class="th">數量</div>
+              <div class="th">單價</div>
+              <div class="th">合計</div>
+            </div>
           </div>
-        </div>
-        <div class="tbody">
-          <div class="tr" v-for="item in order" :key="item.tag">
-            <div class="td">
-              <div class="product_item">
-                <img :src="imageUrl(item.imgUrl)" alt="" />
-                <div>
-                  {{ item.title }}
-                  <div class="delivery">
-                    <p>運送方式:</p>
-                    <p>{{ item.deliver }}</p>
-                  </div>
-                  <div class="code">
-                    <p>編號:</p>
-                    <p>{{ item.tag }}</p>
+          <div class="tbody">
+            <div class="tr" v-for="item in order" :key="item.tag">
+              <div class="td">
+                <div class="product_item">
+                  <img :src="imageUrl(item.imgUrl)" alt="" />
+                  <div>
+                    {{ item.title }}
+                    <div class="delivery">
+                      <p>運送方式:</p>
+                      <p>{{ item.deliver }}</p>
+                    </div>
+                    <div class="code">
+                      <p>編號:</p>
+                      <p>{{ item.tag }}</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="td">1</div>
+              <div class="td">{{ item.price }}元</div>
+              <div class="td item_total">{{ item.total }}元</div>
             </div>
-            <div class="td">1</div>
-            <div class="td">{{ item.price }}元</div>
-            <div class="td item_total">{{ item.total }}元</div>
+            <div class="tr product_price">
+              <div class="td">
+                <div>
+                  <p>商品總金額</p>
+                  <p>活動折扣</p>
+                </div>
+              </div>
+              <div class="td"></div>
+              <div class="td"></div>
+              <div class="td">
+                <div>
+                  <p>14,260元</p>
+                  <p>1,711元</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr product_total">
+              <div class="td">
+                <div>
+                  <p>運費</p>
+                  <p>結帳總金額</p>
+                </div>
+              </div>
+              <div class="td"></div>
+              <div class="td"></div>
+              <div class="td">
+                <div>
+                  <p>120元</p>
+                  <p>12,549元</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="warnings">
+                <span class="material-icons-outlined"> error </span>
+                <p>
+                  常溫商品滿1500元享免運費，如需裝到第二箱需滿3000元享免運費，以此類推。<br />倘若客服評估後需加收運費，會再與您聯繫。
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="tr product_price">
-            <div class="td">
-              <div>
-                <p>商品總金額</p>
-                <p>活動折扣</p>
-              </div>
-            </div>
-            <div class="td"></div>
-            <div class="td"></div>
-            <div class="td">
-              <div>
-                <p>14,260元</p>
-                <p>1,711元</p>
-              </div>
+        </div>
+      </div>
+      <div class="table_sm">
+        <div class="table product_table">
+          <div class="thead">
+            <div class="tr">
+              <div class="th">購物清單</div>
             </div>
           </div>
-          <div class="tr product_total">
-            <div class="td">
-              <div>
-                <p>運費</p>
-                <p>結帳總金額</p>
+          <div class="tbody">
+            <div class="tr" v-for="item in order" :key="item.tag">
+              <div class="td">
+                <div class="product_item">
+                  <img :src="imageUrl(item.imgUrl)" alt="" />
+                  <div>
+                    {{ item.title }}
+                    <div class="delivery">
+                      <p>運送方式:</p>
+                      <p>{{ item.deliver }}</p>
+                    </div>
+                    <div class="code">
+                      <p>編號:</p>
+                      <p>{{ item.tag }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div>1</div>
+                <div>{{ item.price }}元</div>
+                <div class="item_total">{{ item.total }}元</div>
               </div>
             </div>
-            <div class="td"></div>
-            <div class="td"></div>
-            <div class="td">
-              <div>
-                <p>120元</p>
-                <p>12,549元</p>
+            <div class="tr product_price">
+              <div class="td">
+                <div>
+                  <p>商品總金額</p>
+                  <p>14,260元</p>
+                </div>
+                <div>
+                  <p>活動折扣</p>
+                  <p>1,711元</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="tr">
-            <div class="warnings">
-              <span class="material-icons-outlined"> error </span>
-              <p>
-                常溫商品滿1500元享免運費，如需裝到第二箱需滿3000元享免運費，以此類推。<br />倘若客服評估後需加收運費，會再與您聯繫。
-              </p>
+            <div class="tr product_total">
+              <div class="td">
+                <div>
+                  <p>運費</p>
+                  <p>結帳總金額</p>
+                </div>
+                <div>
+                  <p>120元</p>
+                  <p>12,549元</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="warnings">
+                <span class="material-icons-outlined"> error </span>
+                <p>
+                  常溫商品滿1500元享免運費，如需裝到第二箱需滿3000元享免運費，以此類推。<br />倘若客服評估後需加收運費，會再與您聯繫。
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -23,140 +23,282 @@
         <p>Shopping &nbsp Cart</p>
       </div>
       <h3>請訂單已成立，感謝您的訂購。</h3>
-      <div class="pay_table">
-        <div class="thead">
-          <div class="tr">
-            <div class="th">訂購明細</div>
-            <div class="th"></div>
-          </div>
-        </div>
-        <div class="tbody">
-          <div class="tr">
-            <div class="td">
-              <div class="pay_list">
-                <h4>訂購日期</h4>
-                <p>2022/8/25 12:00</p>
-              </div>
-              <div class="pay_list">
-                <h4>訂購編號</h4>
-                <p class="text-danger">L20220812003</p>
-              </div>
-            </div>
-            <div class="td"></div>
-          </div>
-          <div class="tr">
-            <div class="td">
-              <div class="pay_list">
-                <h4>訂購人</h4>
-                <p>XXX</p>
-              </div>
-              <div class="pay_list">
-                <h4>Email</h4>
-                <p>jimlai@e-giant.com.tw</p>
-              </div>
-              <div class="pay_list">
-                <h4>手機號碼</h4>
-                <p>09123456789</p>
-              </div>
-              <div class="pay_list">
-                <h4>市話</h4>
-                <p>0412345689</p>
-              </div>
-              <div class="pay_list">
-                <h4>聯絡地址</h4>
-                <p>408臺中市南屯區文心路一段378號1F</p>
-              </div>
-            </div>
-            <div class="td">
-              <div class="pay_list">
-                <h4>收件人</h4>
-                <p>XXX</p>
-              </div>
-              <div class="pay_list">
-                <h4>Email</h4>
-                <p>jimlai@e-giant.com.tw</p>
-              </div>
-              <div class="pay_list">
-                <h4>手機號碼</h4>
-                <p>09123456789</p>
-              </div>
-              <div class="pay_list">
-                <h4>市話</h4>
-                <p>0412345689</p>
-              </div>
-              <div class="pay_list">
-                <h4>聯絡地址</h4>
-                <p>408臺中市南屯區文心路一段378號1F</p>
-              </div>
+      <div class="table_xl">
+        <div class="pay_table">
+          <div class="thead">
+            <div class="tr">
+              <div class="th">訂購明細</div>
+              <div class="th"></div>
             </div>
           </div>
-          <div class="tr">
-            <div class="td">
-              <div class="pay_list">
-                <h4>付款方式</h4>
-                <p class="text-danger">貨到付款</p>
-              </div>
-              <div class="pay_list">
-                <h4>配送方式</h4>
-                <p class="text-danger">宅配</p>
-              </div>
-              <div class="pay_list">
-                <h4>發票資料</h4>
-                <div>
-                  <p>個人電子發票-寄送至訂購人電子信箱</p>
-                  <span class="text-danger">發票將會於出貨後7天開立</span>
+          <div class="tbody">
+            <div class="tr">
+              <div class="td">
+                <div class="pay_list">
+                  <h4>訂購日期</h4>
+                  <p>2022/8/25 12:00</p>
+                </div>
+                <div class="pay_list">
+                  <h4>訂購編號</h4>
+                  <p class="text-danger">L20220812003</p>
                 </div>
               </div>
-              <div class="pay_list">
-                <h4>商品小計</h4>
-                <p>14,260 元</p>
+              <div class="td"></div>
+            </div>
+            <div class="tr">
+              <div class="td">
+                <div class="pay_list">
+                  <h4>訂購人</h4>
+                  <p>XXX</p>
+                </div>
+                <div class="pay_list">
+                  <h4>Email</h4>
+                  <p>jimlai@e-giant.com.tw</p>
+                </div>
+                <div class="pay_list">
+                  <h4>手機號碼</h4>
+                  <p>09123456789</p>
+                </div>
+                <div class="pay_list">
+                  <h4>市話</h4>
+                  <p>0412345689</p>
+                </div>
+                <div class="pay_list">
+                  <h4>聯絡地址</h4>
+                  <p>408臺中市南屯區文心路一段378號1F</p>
+                </div>
               </div>
-              <div class="pay_list">
-                <h4>運費</h4>
-                <p>120 元</p>
+              <div class="td">
+                <div class="pay_list">
+                  <h4>收件人</h4>
+                  <p>XXX</p>
+                </div>
+                <div class="pay_list">
+                  <h4>Email</h4>
+                  <p>jimlai@e-giant.com.tw</p>
+                </div>
+                <div class="pay_list">
+                  <h4>手機號碼</h4>
+                  <p>09123456789</p>
+                </div>
+                <div class="pay_list">
+                  <h4>市話</h4>
+                  <p>0412345689</p>
+                </div>
+                <div class="pay_list">
+                  <h4>聯絡地址</h4>
+                  <p>408臺中市南屯區文心路一段378號1F</p>
+                </div>
               </div>
-              <div class="pay_list">
-                <h4>優惠折扣</h4>
-                <p>1,711 元</p>
-              </div>
-              <div class="pay_list">
-                <h4>訂單總金額</h4>
-                <p class="text-danger">12,549 元</p>
+            </div>
+            <div class="tr">
+              <div class="td">
+                <div class="pay_list">
+                  <h4>付款方式</h4>
+                  <p class="text-danger">貨到付款</p>
+                </div>
+                <div class="pay_list">
+                  <h4>配送方式</h4>
+                  <p class="text-danger">宅配</p>
+                </div>
+                <div class="pay_list">
+                  <h4>發票資料</h4>
+                  <div>
+                    <p>個人電子發票-寄送至訂購人電子信箱</p>
+                    <span class="text-danger">發票將會於出貨後7天開立</span>
+                  </div>
+                </div>
+                <div class="pay_list">
+                  <h4>商品小計</h4>
+                  <p>14,260 元</p>
+                </div>
+                <div class="pay_list">
+                  <h4>運費</h4>
+                  <p>120 元</p>
+                </div>
+                <div class="pay_list">
+                  <h4>優惠折扣</h4>
+                  <p>1,711 元</p>
+                </div>
+                <div class="pay_list">
+                  <h4>訂單總金額</h4>
+                  <p class="text-danger">12,549 元</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="table product_table">
-        <div class="thead">
-          <div class="tr">
-            <div class="th">商品名稱</div>
-            <div class="th">數量</div>
-            <div class="th">單價</div>
-            <div class="th">合計</div>
+      <div class="table_sm">
+        <div class="pay_table">
+          <div class="thead">
+            <div class="tr">
+              <div class="th">訂購明細</div>
+            </div>
           </div>
-        </div>
-        <div class="tbody">
-          <div class="tr" v-for="item in order" :key="item.tag">
-            <div class="td">
-              <div class="product_item">
-                <img :src="imageUrl(item.imgUrl)" alt="" />
-                <div>
-                  {{ item.title }}
-                  <div class="delivery">
-                    <p>運送方式:</p>
-                    <p>{{ item.deliver }}</p>
-                  </div>
-                  <div class="code">
-                    <p>編號:</p>
-                    <p>{{ item.tag }}</p>
-                  </div>
+          <div class="tbody">
+            <div class="tr">
+              <div class="td">
+                <div class="pay_list">
+                  <h4>訂購日期</h4>
+                  <p>2022/8/25 12:00</p>
+                </div>
+                <div class="pay_list">
+                  <h4>訂購編號</h4>
+                  <p class="text-danger">L20220812003</p>
                 </div>
               </div>
             </div>
-            <div class="td">1</div>
-            <div class="td">{{ item.price }}元</div>
-            <div class="td item_total">{{ item.total }}元</div>
+            <div class="tr">
+              <div class="td">
+                <div class="pay_list">
+                  <h4>訂購人</h4>
+                  <p>XXX</p>
+                </div>
+                <div class="pay_list">
+                  <h4>Email</h4>
+                  <p>jimlai@e-giant.com.tw</p>
+                </div>
+                <div class="pay_list">
+                  <h4>手機號碼</h4>
+                  <p>09123456789</p>
+                </div>
+                <div class="pay_list">
+                  <h4>市話</h4>
+                  <p>0412345689</p>
+                </div>
+                <div class="pay_list">
+                  <h4>聯絡地址</h4>
+                  <p>408臺中市南屯區文心路一段378號1F</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td">
+                <div class="pay_list">
+                  <h4>收件人</h4>
+                  <p>XXX</p>
+                </div>
+                <div class="pay_list">
+                  <h4>Email</h4>
+                  <p>jimlai@e-giant.com.tw</p>
+                </div>
+                <div class="pay_list">
+                  <h4>手機號碼</h4>
+                  <p>09123456789</p>
+                </div>
+                <div class="pay_list">
+                  <h4>市話</h4>
+                  <p>0412345689</p>
+                </div>
+                <div class="pay_list">
+                  <h4>聯絡地址</h4>
+                  <p>408臺中市南屯區文心路一段378號1F</p>
+                </div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td">
+                <div class="pay_list">
+                  <h4>付款方式</h4>
+                  <p class="text-danger">貨到付款</p>
+                </div>
+                <div class="pay_list">
+                  <h4>配送方式</h4>
+                  <p class="text-danger">宅配</p>
+                </div>
+                <div class="pay_list">
+                  <h4>發票資料</h4>
+                  <div>
+                    <p>個人電子發票-寄送至訂購人電子信箱</p>
+                    <span class="text-danger">發票將會於出貨後7天開立</span>
+                  </div>
+                </div>
+                <div class="pay_list">
+                  <h4>商品小計</h4>
+                  <p>14,260 元</p>
+                </div>
+                <div class="pay_list">
+                  <h4>運費</h4>
+                  <p>120 元</p>
+                </div>
+                <div class="pay_list">
+                  <h4>優惠折扣</h4>
+                  <p>1,711 元</p>
+                </div>
+                <div class="pay_list">
+                  <h4>訂單總金額</h4>
+                  <p class="text-danger">12,549 元</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table_xl">
+        <div class="table product_table">
+          <div class="thead">
+            <div class="tr">
+              <div class="th">商品名稱</div>
+              <div class="th">數量</div>
+              <div class="th">單價</div>
+              <div class="th">合計</div>
+            </div>
+          </div>
+          <div class="tbody">
+            <div class="tr" v-for="item in order" :key="item.tag">
+              <div class="td">
+                <div class="product_item">
+                  <img :src="imageUrl(item.imgUrl)" alt="" />
+                  <div>
+                    {{ item.title }}
+                    <div class="delivery">
+                      <p>運送方式:</p>
+                      <p>{{ item.deliver }}</p>
+                    </div>
+                    <div class="code">
+                      <p>編號:</p>
+                      <p>{{ item.tag }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="td">1</div>
+              <div class="td">{{ item.price }}元</div>
+              <div class="td item_total">{{ item.total }}元</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table_sm">
+        <div class="table product_table">
+          <div class="thead">
+            <div class="tr">
+              <div class="th">購物清單</div>
+            </div>
+          </div>
+          <div class="tbody">
+            <div class="tr" v-for="item in order" :key="item.tag">
+              <div class="td">
+                <div class="product_item">
+                  <img :src="imageUrl(item.imgUrl)" alt="" />
+                  <div>
+                    {{ item.title }}
+                    <div class="delivery">
+                      <p>運送方式:</p>
+                      <p>{{ item.deliver }}</p>
+                    </div>
+                    <div class="code">
+                      <p>編號:</p>
+                      <p>{{ item.tag }}</p>
+                    </div>
+                  </div>
+                </div>
+                <div>1</div>
+                <div>{{ item.price }}元</div>
+                <div class="item_total">{{ item.total }}元</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

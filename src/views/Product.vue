@@ -8,7 +8,7 @@
       />
       <btnBanner></btnBanner>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <ul class="breadcrumb">
         <li>
           <RouterLink to="/">
@@ -18,7 +18,7 @@
         <li class="active">線上購物</li>
       </ul>
 
-      <div class="title">
+      <div class="title offset-1">
         <h2>線上購物</h2>
         <p>Promotional &nbsp Items</p>
       </div>
@@ -36,10 +36,14 @@
               :key="item.title"
             >
               <div class="product_card">
-                <img :src="imageUrl(item.img)" alt="" />
+                <RouterLink to="/productdetail">
+                  <img :src="imageUrl(item.img)" alt="" />
+                </RouterLink>
+
                 <div class="card_text">
                   <div class="tag">
                     <span>門市限定</span>
+                    <span>人氣精選</span>
                   </div>
                   <h4>
                     <RouterLink to="/productdetail">
@@ -104,7 +108,7 @@ export default {
         },
         {
           img: "product02.png",
-          title: "[新品]肉鬆小脆餅",
+          title: "[新品]金鑽土鳳梨酥禮盒-蛋奶",
           price: "150",
         },
         {

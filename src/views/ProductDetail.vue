@@ -73,7 +73,7 @@
               <h4>[新品]肉鬆小脆餅</h4>
               <p class="price">單價150元</p>
               <div class="coupon">
-                <p>適用優惠</p>
+                <span>適用優惠</span>
                 <p>滿1500享免運</p>
               </div>
               <p class="info_text">
