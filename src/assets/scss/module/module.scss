@@ -14,11 +14,11 @@
     h3 {
       color: $red;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 33px;
       margin-bottom: 20px;
     }
     h4 {
-      font-size: 28px;
+      font-size: 30px;
       color: $red;
       &.company {
         color: #000;
@@ -27,6 +27,7 @@
 
     p {
       line-height: 2.5;
+      font-size: 20px;
       span {
         font-size: 20px;
         color: $red;
@@ -123,16 +124,6 @@
     color: $red;
   }
   @include lg {
-    margin-left: 40px;
-    &::before {
-      width: 160px;
-      left: -27px;
-    }
-    h2 {
-      font-size: 30px;
-    }
-  }
-  @include lg {
     &::before {
       display: none;
     }
@@ -154,6 +145,7 @@
   width: 180px;
   height: 60px;
   font-size: 18px;
+  font-weight: bold;
   background: url("/src/assets/img/global/button_bg_active.png") no-repeat
     center;
   background-size: contain;
@@ -172,6 +164,7 @@
   width: 180px;
   height: 60px;
   font-size: 18px;
+  font-weight: bold;
   background: url("/src/assets/img/global/button_bg.png") no-repeat center;
   background-size: contain;
   color: $red;
@@ -451,6 +444,8 @@ button {
   margin-left: 20px;
   box-shadow: 2px 2px 2px 2px #f6eedd;
   white-space: nowrap;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 //會員專區列表
@@ -462,6 +457,8 @@ button {
     a {
       display: block;
       color: #000;
+      font-size: 18px;
+      font-weight: bold;
     }
     &::before {
       width: 10px;
@@ -506,6 +503,30 @@ button {
       }
       &::after {
         width: 50px;
+      }
+    }
+    @include xl {
+      &::before {
+        right: 40px;
+      }
+      &::after {
+        width: 40px;
+      }
+      &:hover {
+        &::before {
+          right: 35px;
+        }
+        &::after {
+          width: 35px;
+        }
+      }
+      &.active {
+        &::before {
+          right: 35px;
+        }
+        &::after {
+          width: 35px;
+        }
       }
     }
   }
@@ -579,6 +600,8 @@ button {
     a {
       display: block;
       color: #000;
+      font-size: 17px;
+      font-weight: 600;
     }
     &::before {
       width: 10px;
@@ -589,11 +612,11 @@ button {
       position: absolute;
       transform: rotate(45deg) translateY(-50%);
       top: 50%;
-      right: 50px;
+      right: 40px;
       transition: 0.5s;
     }
     &::after {
-      width: 50px;
+      width: 40px;
       height: 2px;
       content: "";
       display: block;
@@ -608,10 +631,10 @@ button {
         color: $red;
       }
       &::before {
-        right: 40px;
+        right: 30px;
       }
       &::after {
-        width: 40px;
+        width: 30px;
       }
     }
   }
@@ -757,7 +780,7 @@ button {
       .sm_box {
         width: 10px;
         height: 10px;
-        margin-right: 4px;
+        margin-right: 8px;
         transform: rotate(45deg);
       }
       .box1 {
@@ -794,44 +817,51 @@ button {
     }
   }
 }
-//分頁
+
 .pagination {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 35px 0;
   ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    li {
-      width: 60px;
-      height: 60px;
-      display: flex;
-      border: 1px solid $red;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      &:first-child,
-      &:last-child {
-        border: none;
-        &:hover {
-          background: transparent;
-        }
-      }
-      &:hover {
-        background: $red;
-        a {
-          color: #fff;
-        }
-      }
+  }
+  li {
+    &:first-child,
+    &:last-child {
       a {
-        color: $red;
+        border: none;
+        background: transparent;
       }
+    }
+    &.active {
+      a {
+        background: $red;
+        color: #fff;
+      }
+    }
+  }
+  a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid $red;
+    color: $red;
+    &:hover {
+      color: #fff;
+      background: $red;
     }
   }
   @include sm {
     ul {
       gap: 10px;
-      li {
+      a {
         width: 40px;
         height: 40px;
       }

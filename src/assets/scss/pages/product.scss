@@ -26,6 +26,8 @@
       color: $red;
       background: #fff;
       box-shadow: 3px 3px 2px 2px #f6eedd;
+      font-size: 25px;
+      font-weight: 600;
       position: relative;
       &::after {
         position: absolute;
@@ -65,11 +67,12 @@
     a {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 40px;
       align-items: center;
       justify-content: center;
       width: 30%;
       padding: 50px 0;
+      font-size: 18px;
       color: #000;
       &:nth-child(2) {
         border-right: 1px solid #707070;

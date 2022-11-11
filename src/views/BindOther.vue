@@ -30,7 +30,10 @@
         <div class="main">
           <div class="form_style">
             <label for="">
-              <img src="../assets/img/global/facebook.png" alt="" />
+              <span>
+                <img src="../assets/img/global/facebook.png" alt="" />
+              </span>
+
               Facebook
             </label>
             <div class="bind_status">
@@ -40,7 +43,9 @@
           </div>
           <div class="form_style">
             <label for="">
-              <img src="../assets/img/global/line.png" alt="" />
+              <span>
+                <img src="../assets/img/global/line.png" alt="" />
+              </span>
               LINE
             </label>
             <div class="bind_status">
@@ -50,7 +55,9 @@
           </div>
           <div class="form_style">
             <label for="">
-              <img src="../assets/img/global/google.png" alt="" />
+              <span>
+                <img src="../assets/img/global/google.png" alt="" />
+              </span>
               GOOGLE
             </label>
             <div class="bind_status">

@@ -6,17 +6,25 @@
           <img src="../assets/img/other/left.png" alt="" />
         </a>
       </li>
-      <li>
-        <a href="">01</a>
+      <li class="active">
+        <a href="">
+          <p>01</p>
+        </a>
       </li>
       <li>
-        <a href="">02</a>
+        <a href="">
+          <p>02</p>
+        </a>
       </li>
       <li>
-        <a href="">03</a>
+        <a href="">
+          <p>03</p>
+        </a>
       </li>
       <li>
-        <a href="">04</a>
+        <a href="">
+          <p>04</p>
+        </a>
       </li>
       <li>
         <a href="">
