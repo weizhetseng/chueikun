@@ -565,7 +565,7 @@ button {
           display: flex;
           margin-bottom: 20px;
           flex-wrap: wrap;
-          > div {
+          .invoice {
             display: flex;
             gap: 10px;
             @include xl {

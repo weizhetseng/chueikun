@@ -235,7 +235,7 @@
                     </div>
                     <div class="pay_list">
                       <h4>發票資料</h4>
-                      <div>
+                      <div class="invoice">
                         <p>個人電子發票-寄送至訂購人電子信箱</p>
                         <span class="text-danger">發票將會於出貨後7天開立</span>
                       </div>

@@ -472,20 +472,20 @@
       white-space: nowrap;
     }
   }
-  .pay_list {
-    .cancel {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      a {
-        color: #fff;
-        display: block;
-        width: 100px;
-        background: $red;
-        padding: 5px;
-        text-align: center;
-        border-radius: 0 30px 0 30px;
-      }
+
+  .cancel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    a {
+      color: #fff;
+      display: block;
+      width: 100px;
+      background: $red;
+      padding: 5px;
+      text-align: center;
+      border-radius: 0 30px 0 30px;
     }
   }
 }
