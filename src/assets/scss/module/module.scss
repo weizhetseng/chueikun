@@ -810,6 +810,17 @@ button {
         width: 30px;
       }
     }
+    &.active {
+      a {
+        color: $red;
+      }
+      &::before {
+        right: 30px;
+      }
+      &::after {
+        width: 30px;
+      }
+    }
   }
   .search {
     margin-bottom: 40px;

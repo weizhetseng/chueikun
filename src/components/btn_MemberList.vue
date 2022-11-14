@@ -1,7 +1,13 @@
 <template>
   <ul class="member_list d-lg-block d-none">
-    <li v-for="item in links" :key="item.title">
-      <RouterLink :to="item.url">{{ item.title }}</RouterLink>
+    <li
+      v-for="(item, index) in links"
+      :key="index"
+      :class="{ active: index == activeClass }"
+    >
+      <RouterLink :to="item.url" @click="listStatus(index)">{{
+        item.title
+      }}</RouterLink>
     </li>
   </ul>
   <div class="d-lg-none d-block">
@@ -34,6 +40,7 @@ export default {
   data() {
     return {
       overlaystatus: false,
+      activeClass: -1,
       links: [
         {
           url: "/memberorder",
@@ -57,6 +64,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    listStatus(item) {
+      console.log(item);
+      this.activeClass = item;
+    },
   },
 };
 </script>

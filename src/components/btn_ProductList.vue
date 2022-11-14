@@ -9,8 +9,14 @@
       </label>
     </div>
     <ul>
-      <li v-for="item in links" :key="item.title">
-        <RouterLink :to="item.url">{{ item.title }}</RouterLink>
+      <li
+        v-for="(item, index) in links"
+        :key="index"
+        :class="{ active: index == activeClass }"
+      >
+        <RouterLink :to="item.url" @click="listStatus(index)">{{
+          item.title
+        }}</RouterLink>
       </li>
     </ul>
   </div>
@@ -20,6 +26,7 @@
 export default {
   data() {
     return {
+      activeClass: -1,
       links: [
         {
           title: "呷卡鶴系列",
@@ -91,6 +98,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    listStatus(item) {
+      console.log(item);
+      this.activeClass = item;
+    },
   },
 };
 </script>
