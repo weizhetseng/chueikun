@@ -294,9 +294,9 @@
                     </div>
                   </div>
                 </div>
-                <div>1</div>
-                <div>{{ item.price }}元</div>
-                <div class="item_total">{{ item.total }}元</div>
+                <div>數量:1</div>
+                <div>單價:{{ item.price }}元</div>
+                <div class="item_total">合計:{{ item.total }}元</div>
               </div>
             </div>
           </div>

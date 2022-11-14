@@ -10,7 +10,7 @@
     gap: 40px;
     @include lg {
       flex-direction: column;
-      gap: 20px;
+      gap: 10px;
     }
     h3 {
       font-size: 25px;
@@ -76,7 +76,9 @@
     }
   }
   .table_sm {
-    width: 100%;
+    table {
+      width: 100%;
+    }
     thead {
       text-align: center;
       font-size: 18px;
