@@ -36,8 +36,12 @@
             <div class="form_style sex">
               <label for="">性別 </label>
               <div class="sex_option">
-                <label for=""><input type="radio" />男</label>
-                <label for=""><input type="radio" />女</label>
+                <label for="man"
+                  ><input id="man" name="sex" type="radio" />男</label
+                >
+                <label for="woman"
+                  ><input id="woman" name="sex" type="radio" />女</label
+                >
               </div>
             </div>
             <div class="form_style date">

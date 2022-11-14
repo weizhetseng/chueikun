@@ -174,9 +174,21 @@
         }
       }
       label {
-        margin-right: 20px;
+        margin-right: 10px;
         @include lg {
           margin-bottom: 10px;
+        }
+      }
+      .tax_number {
+        display: flex;
+        gap: 10px;
+        @include md {
+          flex-direction: column;
+        }
+      }
+      .receipt_radio {
+        label {
+          margin-left: 10px;
         }
       }
       input[type="text"] {

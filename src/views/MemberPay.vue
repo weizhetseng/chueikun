@@ -353,18 +353,16 @@
                 <div class="receipt_title">公司統編發票</div>
                 <div>
                   <div>
-                    <label for="">
+                    <label for="" class="tax_number">
                       <input type="radio" />
                       寄送至訂購人電子信箱
                       <div>
-                        <label for="">
-                          統編
-                          <input type="text" placeholder="請輸入統一編號" />
-                        </label>
+                        統編
+                        <input type="text" placeholder="請輸入統一編號" />
                       </div>
                     </label>
                   </div>
-                  <div>
+                  <div class="receipt_radio">
                     發票品項
                     <label for="">
                       <input type="radio" />

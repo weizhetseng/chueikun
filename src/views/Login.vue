@@ -39,8 +39,8 @@
               <input type="text" placeholder="請輸入密碼" />
             </div>
             <div class="check">
-              <label for="">
-                <input type="checkbox" />
+              <label for="loginCheck">
+                <input id="loginCheck" type="checkbox" />
                 記住我
               </label>
               <RouterLink to="/forgot">忘記密碼</RouterLink>
@@ -144,8 +144,11 @@
               </li>
             </ol>
           </div>
-          <label for="">
-            <input type="checkbox" />我已閱讀並同意提供以上資料供垂坤連繫使用。
+          <label for="termsCheck">
+            <input
+              id="termsCheck"
+              type="checkbox"
+            />我已閱讀並同意提供以上資料供垂坤連繫使用。
           </label>
           <div class="button_area">
             <RouterLink to="/register" class="button">下一步</RouterLink>

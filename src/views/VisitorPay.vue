@@ -172,13 +172,21 @@
           <div class="tr">
             <div class="td">
               <div class="form_style">
-                <label for="">姓名</label>
-                <input type="text" placeholder="請輸入姓名" />
+                <label for="ordererName">姓名</label>
+                <input
+                  class="ordererName"
+                  type="text"
+                  placeholder="請輸入姓名"
+                />
               </div>
               <div class="form_style">
-                <label for="">E-mail</label>
+                <label for="ordererEmail">E-mail</label>
                 <div class="captcha_input">
-                  <input type="text" placeholder="請輸入E-mail" />
+                  <input
+                    id="ordererEmail"
+                    type="text"
+                    placeholder="請輸入E-mail"
+                  />
                   <button
                     class="captcha"
                     @click="postCaptcha()"
@@ -192,9 +200,13 @@
                 </div>
               </div>
               <div class="form_style">
-                <label for="">E-mail驗證碼</label>
+                <label for="ordererEmailCaptcha">E-mail驗證碼</label>
                 <div class="captcha_input">
-                  <input type="text" placeholder="請輸入驗證碼" />
+                  <input
+                    id="ordererEmailCaptcha"
+                    type="text"
+                    placeholder="請輸入驗證碼"
+                  />
                   <button
                     class="captcha"
                     v-show="captchaStatus"
@@ -207,9 +219,13 @@
                 </div>
               </div>
               <div class="form_style">
-                <label for="">手機號碼</label>
+                <label for="ordererPhone">手機號碼</label>
                 <div class="captcha_input">
-                  <input type="text" placeholder="請輸入手機號碼" />
+                  <input
+                    id="ordererPhone"
+                    type="text"
+                    placeholder="請輸入手機號碼"
+                  />
                   <button
                     class="captcha"
                     @click="postCaptcha()"
@@ -223,9 +239,13 @@
                 </div>
               </div>
               <div class="form_style">
-                <label for="">簡訊驗證碼</label>
+                <label for="ordererPhoneCaptcha">簡訊驗證碼</label>
                 <div class="captcha_input">
-                  <input type="text" placeholder="請輸入驗證碼" />
+                  <input
+                    id="ordererPhoneCaptcha"
+                    type="text"
+                    placeholder="請輸入驗證碼"
+                  />
                   <button
                     class="captcha"
                     v-show="captchaStatus"
@@ -238,11 +258,15 @@
                 </div>
               </div>
               <div class="form_style">
-                <label for="">市話</label>
-                <input type="text" placeholder="請輸入市話" />
+                <label for="ordererCityPhone">市話</label>
+                <input
+                  id="ordererCityPhone"
+                  type="text"
+                  placeholder="請輸入市話"
+                />
               </div>
               <div class="form_style">
-                <label for="">聯絡地址</label>
+                <label for="ordererAdd">聯絡地址</label>
                 <div class="address_area">
                   <div class="select_area">
                     <select name="" id="" class="city">
@@ -257,6 +281,7 @@
                   </div>
                   <input
                     type="text"
+                    id="ordererCityPhone"
                     class="address"
                     placeholder="請輸入聯絡地址"
                   />
@@ -276,8 +301,8 @@
           <div class="tr">
             <div class="td">
               <div class="check">
-                <label for="">
-                  <input type="checkbox" />
+                <label for="same">
+                  <input id="same" type="checkbox" />
                   同訂購人
                 </label>
               </div>
@@ -355,8 +380,8 @@
           <div class="tr">
             <div class="td">
               <div class="delivery_methods">
-                <label for="">
-                  <input type="radio" />
+                <label for="delivert">
+                  <input id="delivert" type="radio" />
                   宅配到府
                 </label>
                 <p>
@@ -407,18 +432,18 @@
                 <div class="receipt_title">公司統編發票</div>
                 <div>
                   <div>
-                    <label for="">
-                      <input type="radio" />
-                      寄送至訂購人電子信箱
+                    <label for="" class="tax_number">
                       <div>
-                        <label for="">
-                          統編
-                          <input type="text" placeholder="請輸入統一編號" />
-                        </label>
+                        <input type="radio" />
+                        寄送至訂購人電子信箱
+                      </div>
+                      <div>
+                        統編
+                        <input type="text" placeholder="請輸入統一編號" />
                       </div>
                     </label>
                   </div>
-                  <div>
+                  <div class="receipt_radio">
                     發票品項
                     <label for="">
                       <input type="radio" />
