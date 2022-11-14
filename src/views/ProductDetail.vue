@@ -44,6 +44,7 @@
                       <p>人氣推薦</p>
                     </div>
                     <img :src="imageUrl(item.img)" />
+
                     <span
                       class="material-icons-outlined"
                       data-bs-toggle="modal"

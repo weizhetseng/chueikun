@@ -298,6 +298,9 @@
   .thumb_area {
     border-bottom: 1px solid #707070;
     padding-bottom: 50px;
+    span {
+      cursor: pointer;
+    }
     @include lg {
       margin-bottom: 20px;
     }
