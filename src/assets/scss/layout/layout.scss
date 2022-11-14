@@ -379,8 +379,14 @@ body {
   padding: 50px 20px;
   .alert_img {
     display: flex;
+    justify-content: center;
     img {
-      width: 30%;
+      width: 20%;
+    }
+    @include md {
+      img {
+        width: 15%;
+      }
     }
   }
   p {
