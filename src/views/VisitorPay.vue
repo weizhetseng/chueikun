@@ -220,12 +220,8 @@
               </div>
               <div class="form_style">
                 <label for="ordererPhone">手機號碼</label>
-                <div class="captcha_input">
-                  <input
-                    id="ordererPhone"
-                    type="text"
-                    placeholder="請輸入手機號碼"
-                  />
+                <div id="ordererPhone" class="captcha_input">
+                  <input type="text" placeholder="請輸入手機號碼" />
                   <button
                     class="captcha"
                     @click="postCaptcha()"
@@ -266,7 +262,7 @@
                 />
               </div>
               <div class="form_style">
-                <label for="ordererAdd">聯絡地址</label>
+                <label for="">聯絡地址</label>
                 <div class="address_area">
                   <div class="select_area">
                     <select name="" id="" class="city">
@@ -281,7 +277,6 @@
                   </div>
                   <input
                     type="text"
-                    id="ordererCityPhone"
                     class="address"
                     placeholder="請輸入聯絡地址"
                   />
@@ -380,8 +375,8 @@
           <div class="tr">
             <div class="td">
               <div class="delivery_methods">
-                <label for="delivert">
-                  <input id="delivert" type="radio" />
+                <label for="">
+                  <input type="radio" />
                   宅配到府
                 </label>
                 <p>
