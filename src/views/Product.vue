@@ -18,7 +18,7 @@
         <li class="active">線上購物</li>
       </ul>
 
-      <div class="title offset-1">
+      <div class="title offset-lg-1">
         <h2>線上購物</h2>
         <p>Promotional &nbsp Items</p>
       </div>

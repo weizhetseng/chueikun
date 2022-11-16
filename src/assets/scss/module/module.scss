@@ -131,6 +131,11 @@
       font-size: 30px;
     }
   }
+  @include md {
+    h2 {
+      font-size: 25px;
+    }
+  }
 }
 //按鈕樣式
 .button_area {
