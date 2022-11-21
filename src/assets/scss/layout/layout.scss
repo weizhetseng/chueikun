@@ -192,6 +192,9 @@ body {
     border-top: 20px solid $red;
     border-bottom: 20px solid $red;
     padding: 15px 30px;
+    .modal-body {
+      padding: 0;
+    }
     button {
       float: right;
       transform: translateY(-60px);

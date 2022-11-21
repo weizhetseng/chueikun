@@ -131,7 +131,7 @@
             最新消息
           </RouterLink>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li v-for="item in news_link" :key="item.title">
+            <li v-for="item in news_link" :key="item.title" @click="openMenu()">
               <RouterLink class="dropdown-item" :to="item.url">{{
                 item.title
               }}</RouterLink>
@@ -139,7 +139,9 @@
           </ul>
         </li>
         <li class="page_link">
-          <RouterLink to="/about" class="nav-link">關於垂坤</RouterLink>
+          <RouterLink to="/about" class="nav-link" @click="openMenu()"
+            >關於垂坤</RouterLink
+          >
         </li>
         <li class="page_link">
           <RouterLink
@@ -152,7 +154,11 @@
             線上購物
           </RouterLink>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li v-for="item in product_links" :key="item.title">
+            <li
+              v-for="item in product_links"
+              :key="item.title"
+              @click="openMenu()"
+            >
               <RouterLink class="dropdown-item" :to="item.url">{{
                 item.title
               }}</RouterLink>
@@ -160,23 +166,29 @@
           </ul>
         </li>
         <li class="page_link">
-          <RouterLink to="/location" class="nav-link">營業據點</RouterLink>
+          <RouterLink to="/location" class="nav-link" @click="openMenu()"
+            >營業據點</RouterLink
+          >
         </li>
         <li class="page_link">
-          <a href="" class="nav-link">訂單下載</a>
+          <a href="" class="nav-link" @click="openMenu()">訂單下載</a>
         </li>
       </ul>
     </div>
 
     <ul>
       <li>
-        <RouterLink to="/login" class="down_link link1">
+        <RouterLink to="/login" class="down_link link1" @click="openMenu()">
           會員專區
           <img src="../assets/img/global/user02.png" alt="" />
         </RouterLink>
       </li>
       <li>
-        <RouterLink to="/shoppingcart" class="down_link link2">
+        <RouterLink
+          to="/shoppingcart"
+          class="down_link link2"
+          @click="openMenu()"
+        >
           購物車
           <img src="../assets/img/global/cart.png" alt="" />
           <span>0</span>
@@ -188,6 +200,7 @@
           data-bs-toggle="modal"
           data-bs-target="#liar"
           class="down_link link3"
+          @click="openMenu()"
         >
           詐騙手法大公開
           <img src="../assets/img/global/user01.png" alt="" />
